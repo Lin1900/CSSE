@@ -8,12 +8,10 @@ import urllib
 def convertString2Dictionary(inputString = ""):
     errorDict = {'error':'true'}
     outPut = {}         # A vaild output container.
-
     inputString = urllib.unquote(inputString)
     # Separate input string with ',' and remove space between elements.
     keyValues = inputString.split(',')
-    keyValues = [str.strip() for str in keyValues]
-
+    keyValues = [str1.strip() for str1 in keyValues]
     if len(keyValues) == 0:       # There is at least one key value pair.
         return errorDict
     # Separate each pair with '=' as and remove space between elements.
@@ -23,7 +21,6 @@ def convertString2Dictionary(inputString = ""):
         # check that each pair have a 'key' and a 'value'
         if len(keyValue) != 2:
             return errorDict
-
         key = keyValue[0]
         if len(key) <= 0:
             return errorDict
@@ -33,11 +30,8 @@ def convertString2Dictionary(inputString = ""):
             return errorDict
         if key in outPut:            # check key is not duplicate
             return errorDict
-
-        value = keyValue[1]
+        value = keyValue[1]          #check value is valid
         if len(value) == 0:
-            return errorDict
-        if not key.isalnum():
             return errorDict
         outPut[key] = value
     return outPut
