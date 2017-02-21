@@ -250,8 +250,27 @@ class SampleTest(unittest.TestCase):
 #                   getcoefficient(3, 4) -> 4
 #                   getcoefficient(4, 5) -> 2
 # Sad path
-#            none ... x is pre-validated
+#            none term, end is pre-validated
 
+
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(0, 5), 1)
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(5, 5), 1)
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(1, 5), 4)
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(2, 5), 2)
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(3, 5), 4)
+    def test500_010_ShouldCalculategetcoefficient(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.getcoefficient(4, 5), 2)
 
 
 # 600 integrate
@@ -266,6 +285,6 @@ class SampleTest(unittest.TestCase):
 # Sad path
 #            none ... x is pre-validated
 
-    def test500_010_ShouldCalculateintegration(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(, , mySample.f(, )), , )
+#    def test500_010_ShouldCalculateintegration(self):
+#        mySample = SM.Sample(self.nominalN)
+#        self.assertAlmostEquals(mySample.integrate(, , mySample.f(, )), , )
