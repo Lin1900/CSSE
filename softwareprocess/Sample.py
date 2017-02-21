@@ -86,7 +86,7 @@ class Sample(object):
             return 4
         else:
             return 2
-
+'''
         pass
         
         
