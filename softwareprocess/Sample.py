@@ -75,7 +75,13 @@ class Sample(object):
             w = (highBound - lowBound)/s
             temp = 0.0
             for i in range(0, s+1):
-                temp = temp + self.getcoefficient(i, s) * f(lowBound + (i * w), n)
+                if i == 0 or i == s:
+                   coefficient = 1
+                if i % 2 != 0:
+                   coefficient = 4
+                else:
+                    coefficient = 2
+                temp = temp + coefficient * f(lowBound + (i * w), n)
             simpsonNew = (w/3) * temp
             s = s * 2
         return simpsonNew
