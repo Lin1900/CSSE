@@ -235,13 +235,32 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
 
-# 500 integrate
+# 500 getcoefficient
+# Analysis
+#    inputs
+#        term -> integer
+#        end -> integer
+#    outputs
+#        integer -> 1, 2, or 4
+# Happy path
+#    nominal case:  getcoefficient(0, 5) -> 1
+#                   getcoefficient(5, 5) -> 1
+#                   getcoefficient(1, 5) -> 4
+#                   getcoefficient(2, 5) -> 2
+#                   getcoefficient(3, 4) -> 4
+#                   getcoefficient(4, 5) -> 2
+# Sad path
+#            none ... x is pre-validated
+
+
+
+# 600 integrate
 # Analysis
 #    inputs
 #        n -> numeric mandatory validated
-#        u -> float mandatory validated
+#        f -> float mandatory validated
 #    outputs
-#        float .GE. 0
+#        float
 # Happy path
 #    nominal case:
 # Sad path
@@ -249,4 +268,4 @@ class SampleTest(unittest.TestCase):
 
     def test500_010_ShouldCalculateintegration(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(1.0, 4, mySample.f), 0.5, 3)
+        self.assertAlmostEquals(mySample.integrate(, , mySample.f(, )), , )
