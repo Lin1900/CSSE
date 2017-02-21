@@ -249,6 +249,7 @@ class SampleTest(unittest.TestCase):
 #                   getcoefficient(2, 5) -> 2
 #                   getcoefficient(3, 4) -> 4
 #                   getcoefficient(4, 5) -> 2
+#    only one element case: getcoefficient(0, 0) -> 1
 # Sad path
 #            none ... term, end is pre-validated
 
@@ -274,13 +275,12 @@ class SampleTest(unittest.TestCase):
     def test500_110_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(0, 0), 1)
-#    def test500_210_ShouldCalculategetcoefficient(self):
- #       mySample = SM.Sample(self.nominalN)
-  #      self.assertAlmostEquals(mySample.getcoefficient(2, 1), 2)
 
 # 600 integrate
 # Analysis
 #    inputs
+#        lowBound ->
+#        highBound ->
 #        n -> numeric mandatory validated
 #        f -> float mandatory validated
 #    outputs
@@ -294,6 +294,6 @@ class SampleTest(unittest.TestCase):
 #        mySample = SM.Sample(self.nominalN)
 #        self.assertAlmostEquals(mySample.integrate(, , mySample.f(, )), , )
 
-    def test600_010_ShouldCalculategetcoefficient(self):
+    def test600_030_ShouldCalculateintegrate(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.getcoefficient(0, 5), 1)
+        self.assertAlmostEquals(mySample.integrate(1.4, 20, 5, mySample.f), 1.04465, 4)
