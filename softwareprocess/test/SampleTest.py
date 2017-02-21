@@ -296,10 +296,8 @@ class SampleTest(unittest.TestCase):
 # Sad path
 #            none ... x is pre-validated
 
-#    def test600_030_ShouldCalculateintegrate(self):
- #       mySample = SM.Sample(self.nominalN)
-   #     self.assertAlmostEquals(mySample.integrate(0, 1.4, 20, mySample.f), 1.04465, 4)
-
-#    def test600_030_ShouldCalculateintegrate(self):
- #       mySample = SM.Sample(self.nominalN)
-  #      self.assertAlmostEquals(mySample.integrate(0, 1.1342, 2, mySample.f), 0.8481, 3)
+    def test600_010_ShouldCalculateintegrate(self):
+        def f1(u, n):
+            return u
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.integrate(0.0, 1.0, 1, f1)
