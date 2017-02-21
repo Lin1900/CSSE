@@ -312,7 +312,7 @@ class SampleTest(unittest.TestCase):
         def f3(u, n):
             return u**6
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(0.0, 1.0, 1, f3), 0.1428, 4)
+        self.assertAlmostEquals(mySample.integrate(0.0, 1.0, 1, f3), 0.1429, 4)
 
 #    def test600_010_ShouldCalculateintegrate(self):
  #       def f1(u, n):
