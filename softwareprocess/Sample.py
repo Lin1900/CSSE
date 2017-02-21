@@ -83,7 +83,7 @@ class Sample(object):
     def getcoefficient(self, term , end):
         if term == 0 or term == end:
             return 1
-        elif term % 2 != 0:
+        if term % 2 != 0:
             return 4
         else:
             return 2

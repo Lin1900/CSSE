@@ -221,7 +221,7 @@ class SampleTest(unittest.TestCase):
 #        n -> numeric mandatory validated
 #        u -> float mandatory validated
 #    outputs
-#        float .GE. 0
+#        integration -> float
 # Happy path
 #    nominal case:  f(1) -> 0.5787
 # Sad path
@@ -234,4 +234,19 @@ class SampleTest(unittest.TestCase):
     def test400_020_ShouldCalculateF(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
-        
+
+# 500 integrate
+# Analysis
+#    inputs
+#        n -> numeric mandatory validated
+#        u -> float mandatory validated
+#    outputs
+#        float .GE. 0
+# Happy path
+#    nominal case:
+# Sad path
+#            none ... x is pre-validated
+
+    def test500_010_ShouldCalculateintegration(self):
+        mySample = SM.Sample(self.nominalN)
+        self.assertAlmostEquals(mySample.integrate(1.4, 20, mySample.f), 1.04465, 4)
