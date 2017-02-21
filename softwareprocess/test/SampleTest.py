@@ -249,4 +249,4 @@ class SampleTest(unittest.TestCase):
 
     def test500_010_ShouldCalculateintegration(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(1.4, 20, mySample.f), 1.04465, 4)
+        self.assertAlmostEquals(mySample.integrate(1.0, 4, mySample.f), 0.5, 3)
