@@ -300,4 +300,4 @@ class SampleTest(unittest.TestCase):
         def f1(u, n):
             return u
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(0.0, 1.0, 1, f1)
+        self.assertAlmostEquals(mySample.integrate(0.0, 1.0, 1, f1), 0.5, 4)
