@@ -256,21 +256,27 @@ class SampleTest(unittest.TestCase):
     def test500_010_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(0, 5), 1)
+
     def test500_020_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(5, 5), 1)
+
     def test500_030_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(1, 5), 4)
+
     def test500_040_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(2, 5), 2)
+
     def test500_050_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(3, 5), 4)
+
     def test500_060_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(4, 5), 2)
+
 
     def test500_110_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
@@ -290,10 +296,10 @@ class SampleTest(unittest.TestCase):
 # Sad path
 #            none ... x is pre-validated
 
-#    def test500_010_ShouldCalculateintegration(self):
-#        mySample = SM.Sample(self.nominalN)
-#        self.assertAlmostEquals(mySample.integrate(, , mySample.f(, )), , )
+#    def test600_030_ShouldCalculateintegrate(self):
+ #       mySample = SM.Sample(self.nominalN)
+   #     self.assertAlmostEquals(mySample.integrate(0, 1.4, 20, mySample.f), 1.04465, 4)
 
-    def test600_030_ShouldCalculateintegrate(self):
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(0, 1.4, 20, mySample.f), 1.04465, 4)
+#    def test600_030_ShouldCalculateintegrate(self):
+ #       mySample = SM.Sample(self.nominalN)
+  #      self.assertAlmostEquals(mySample.integrate(0, 1.1342, 2, mySample.f), 0.8481, 3)
