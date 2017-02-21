@@ -282,7 +282,7 @@ class SampleTest(unittest.TestCase):
 #        lowBound ->
 #        highBound ->
 #        n -> numeric mandatory validated
-#        f -> float mandatory validated
+#        f -> function
 #    outputs
 #        float
 # Happy path
@@ -296,4 +296,4 @@ class SampleTest(unittest.TestCase):
 
     def test600_030_ShouldCalculateintegrate(self):
         mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(1.4, 20, 5, mySample.f), 1.04465, 4)
+        self.assertAlmostEquals(mySample.integrate(0, 1.4, 20, mySample.f), 1.04465, 4)
