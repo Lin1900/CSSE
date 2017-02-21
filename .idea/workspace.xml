@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b6448492-b0b8-47be-9d65-3b413dd59b65" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/SampleTest.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/Sample.py" afterPath="$PROJECT_DIR$/softwareprocess/Sample.py" />
     </list>
     <ignored path="CSSE.iws" />
@@ -28,8 +26,8 @@
       <file leaf-file-name="Sample.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+            <state relative-caret-position="195">
+              <caret line="85" column="23" lean-forward="false" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -38,8 +36,8 @@
       <file leaf-file-name="SampleTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/SampleTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="-1830">
+              <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -69,8 +67,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-71" />
-    <option name="y" value="29" />
+    <option name="x" value="121" />
+    <option name="y" value="23" />
     <option name="width" value="769" />
     <option name="height" value="689" />
   </component>
@@ -455,57 +453,57 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 29m 35s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 15m 56s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 29m 36s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 17m 52s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 22s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 18m 06s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 26s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 18m 10s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 28s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 18m 27s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 31s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 18m 30s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 33s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 18m 33s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 17h 31m 35s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 19m 05s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 20h 00m 40s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 19m 35s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.02.20 at 17h 29m 37s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
+    <history-entry file="All_Tests_(TDD) - 2017.02.20 at 23h 19m 47s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-71" y="29" width="769" height="689" extended-state="0" />
+    <frame x="121" y="23" width="769" height="689" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09358289" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34731543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34731543" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39932886" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
@@ -893,8 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/SampleTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="-1830">
+          <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -903,8 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+        <state relative-caret-position="195">
+          <caret line="85" column="23" lean-forward="false" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
           <folding />
         </state>
       </provider>

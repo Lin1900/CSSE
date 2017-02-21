@@ -69,7 +69,7 @@ class Sample(object):
         epsilon = 0.001
         simpsonOld = 0.0
         simpsonNew = epsilon
-        s = 2
+        s = 4
         while abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon:
             simpsonOld = simpsonNew
             w = (highBound - lowBound)/s
@@ -83,7 +83,7 @@ class Sample(object):
     def getcoefficient(self, term , end):
         if term == 0 or term == end:
             return 1
-        elif term % 2 == 0:
+        elif term % 2 != 0:
             return 4
         else:
             return 2
