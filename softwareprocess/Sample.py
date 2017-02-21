@@ -80,7 +80,7 @@ class Sample(object):
         return simpsonNew
 
     def getcoefficient(self, term , end):
-        if term == 0 or term == end:     
+        if term == 0 or term == end:
             return 1
         elif term % 2 == 0:
             return 4
