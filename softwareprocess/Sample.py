@@ -31,7 +31,7 @@ class Sample(object):
             raise ValueError(functionName + "invalid tails")
         
         constant = self.calculateConstant(self.n)
-        integration = self.integrate(t, self.n, self.f)
+        integration = self.integrate(0.0,t, self.n, self.f)
         if(tails == 1):
             result = constant * integration + 0.5
         else:
@@ -65,7 +65,29 @@ class Sample(object):
         return result
     
     def integrate(self, lowBound, highBound, n, f):
-        pass
+        epsilon = 0.001
+        simpsonOld = 0.0
+        simpsonNew = epsilon
+        s = 4
+        while abs((simpsonNew - simpsonOld)/simpsonNew) > epsilon:
+            simpsonOld = simpsonNew
+            w = (highBound - lowBound)/s
+            temp = 0.0
+            for i in range(0, s+1):
+                temp = temp + self.getcoefficient(i, s) * f(lowBound + (i * w), n)
+            simpsonNew = (w/3) * temp
+            s = s * 2
+        return simpsonNew
+
+    def getcoefficient(self, term , end):
+        if term == 0 or term == end:     
+            return 1
+        elif term % 2 == 0:
+            return 4
+        else:
+            return 2
+
+
         
         
     
