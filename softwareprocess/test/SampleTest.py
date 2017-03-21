@@ -252,7 +252,7 @@ class SampleTest(unittest.TestCase):
 #    only one element case: getcoefficient(0, 0) -> 1
 # Sad path
 #            none ... term, end is pre-validated
-'''
+
     def test500_010_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(0, 5), 1)
@@ -281,7 +281,7 @@ class SampleTest(unittest.TestCase):
     def test500_110_ShouldCalculategetcoefficient(self):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.getcoefficient(0, 0), 1)
-'''
+
 # 600 integrate
 # Analysis
 #    inputs

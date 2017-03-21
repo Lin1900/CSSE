@@ -65,7 +65,6 @@ class Sample(object):
         return result
     
     def integrate(self, lowBound, highBound, n, f):
-
         epsilon = 0.001
         simpsonOld = 0.0
         simpsonNew = epsilon
@@ -75,24 +74,18 @@ class Sample(object):
             w = (highBound - lowBound)/s
             temp = 0.0
             for i in range(0, s+1):
-                if i == 0 or i == s:
-                   coefficient = 1
-                if i % 2 != 0:
-                   coefficient = 4
-                else:
-                    coefficient = 2
-                temp = temp + coefficient * f(lowBound + (i * w), n)
+                temp = temp + self.getcoefficient(i, s) * f(lowBound + (i * w), n)
             simpsonNew = (w/3) * temp
             s = s * 2
         return simpsonNew
 
-#    def getcoefficient(self, term , end):
-#        if term == 0 or term == end:
-#            return 1
-#        if term % 2 != 0:
-#            return 4
-#        else:
-#            return 2
+    def getcoefficient(self, term , end):
+        if term == 0 or term == end:
+            return 1
+        if term % 2 != 0:
+            return 4
+        else:
+            return 2
 
 
         
