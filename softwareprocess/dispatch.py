@@ -35,6 +35,9 @@ def dispatch(values=None):
     # adjusts the celestial sighting
 def Adjust(values):
     if 'height' in values:
+        if values['height'].isalpha():
+            values['error'] = 'height is invalid'
+            return values
         height = float(values['height'])
         if height < 0:
             values['error'] = 'height is invalid'
