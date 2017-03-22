@@ -25,3 +25,9 @@ class DispatchTest(unittest.TestCase):
         returnedValue = SD.dispatch(inputVal)
         input = {'parameter is not a dictionary'}
         self.assertTrue(returnedValue == input)
+
+    def test_dispatch100_000_emptyInput(self):
+        inputVal = None
+        returnedValue = SD.dispatch(inputVal)
+        input = {'parameter is missing'}
+        self.assertTrue(returnedValue == input)
