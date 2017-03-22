@@ -9,13 +9,13 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(returnedValue == input)
 
     def test_dispatch100_005_observationValueIllegal(self):
-        input = {'op': 'adjust', 'observation': '45d123.4'}
-        returnedValue = SD.dispatch(input)
+        inputValy = {'op': 'adjust', 'observation': '45d123.4'}
+        returnedValue = SD.dispatch(inputValy)
         input == {'error': 'minute is invalid'}
         self.assertTrue(returnedValue == input)
 
     def test_dispatch100_003_validvalues(self):
         input = {'op': 'unknown'}
         output = SD.dispatch(input)
-        input = {'erroe': 'op is not legal operation'}
-        self.assertTrue(output == input)
+        expect = {'erroe': 'op is not a legal operation'}
+        self.assertTrue(output == expect)
