@@ -14,8 +14,8 @@ def dispatch(values=None):
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
     if (not('op' in values)):
-        #values['error'] = 'no op  is specified'
-        return {'error': 'no op is specified'}
+        values['error'] = 'no op  is specified'
+        return values
 
 
 
