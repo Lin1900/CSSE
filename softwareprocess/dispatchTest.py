@@ -33,4 +33,5 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(returnedValue == input)
 
     def test_1211213(self):
-        output = DT.dispatch(42)
+        output = SD.dispatch(42)
+        self.assertTrue(output == {'error':'parameter is not a dictionary'})
