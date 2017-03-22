@@ -3,8 +3,8 @@
     @author: Linyuan Zhang
 """
 
-import math
-import re
+#import math
+#import re
 
 def dispatch(values=None):
 
@@ -31,7 +31,7 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
-
+"""
     # adjusts the celestial sighting
 def Adjust(values):
     if 'height' in values:
@@ -111,4 +111,4 @@ def Adjust(values):
 def convert_to_celsius(i):
     return (i - 32) * 5.0/9.0
 
-
+"""
