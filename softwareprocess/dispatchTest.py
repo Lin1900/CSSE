@@ -10,7 +10,7 @@ class DispatchTest(unittest.TestCase):
 
     def test_dispatch100_005_observationValueIllegal(self):
         input = {'op': 'adjust', 'observation': '45d123.4'}
-        returnedValue = SD.dispatch(inputVal)
+        returnedValue = SD.dispatch(input)
         input == {'error': 'minute is invalid'}
         self.assertTrue(returnedValue == input)
 
