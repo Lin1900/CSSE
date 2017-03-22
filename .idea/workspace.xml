@@ -4,6 +4,8 @@
     <list default="true" id="b6448492-b0b8-47be-9d65-3b413dd59b65" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/lambda/lambda_function.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
     </list>
     <ignored path="CSSE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -438,9 +440,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 41m 43s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 41m 55s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -468,12 +467,15 @@
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 47m 14s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 14h 49m 19s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="27" width="1035" height="689" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3392505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19428007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3909396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -831,7 +833,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -857,20 +857,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="122" column="0" lean-forward="false" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatchTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/dispatchTest.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -883,7 +873,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
+        <state relative-caret-position="15">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
