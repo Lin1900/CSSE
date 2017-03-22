@@ -19,3 +19,9 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch(input)
         expect = {'error': 'op is not a legal operation'}
         self.assertTrue(output == expect)
+
+    def test_dispatch100_000_emptyInput(self):
+        inputVal = {42}
+        returnedValue = SD.dispatch(inputVal)
+        input = {'parameter is not a dictionary'}
+        self.assertTrue(returnedValue == input)
