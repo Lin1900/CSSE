@@ -11,8 +11,8 @@ class DispatchTest(unittest.TestCase):
     def test_dispatch100_005_observationValueIllegal(self):
         inputVal = {'op': 'adjust', 'observation': '45d123.4'}
         returnedValue = SD.dispatch(inputVal)
-        inputVal == {'error': 'minute is invalid'}
-        self.assertTrue(returnedValue == inputVal)
+        expect == {'error': 'minute is invalid'}
+        self.assertTrue(returnedValue == expect)
 
     def test_dispatch100_003_validvalues(self):
         input = {'op': 'unknown'}
