@@ -48,3 +48,6 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch({'op': 'adjust', 'observation': '45d73.4'})
         self.assertTrue(output == {'error': 'minute is invalid'})
 
+    def test_100_005(self):
+        output = SD.dispatch()
+        self.assertTrue(output == {'parameter is missing'})
