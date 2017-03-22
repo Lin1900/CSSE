@@ -38,9 +38,9 @@ class DispatchTest(unittest.TestCase):
 
     def test_100_002(self):
         output = SD.dispatch({})
-        self.assertTrue(output == {'error': 'no op  is specified'})
+        self.assertTrue(output == {'error':'no op  is specified'})
 
     def test_100_003(self):
         output = SD.dispatch({'op': 'unknown'})
-        self.assertTrue(output == {'error': 'op is not a legal operation'})
-    
+        self.assertTrue(output == {'error':'op is not a legal operation'})
+
