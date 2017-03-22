@@ -2,7 +2,18 @@ import unittest
 import softwareprocess.dispatch as SD
 
 class DispatchTest(unittest.TestCase):
-   def test_100_001(self):
+    def test_dispatch100_000_emptyInput(self):
+        inputVal = {}
+        returnedValue = SD.dispatch(inputVal)
+        input = {'error': 'no op  is specified'}
+        self.assertTrue(returnedValue == input)
+
+    def test_dispatch100_005_observationValueIllegal(self):
+        inputValy = {'op': 'adjust', 'observation': '45d123.4'}
+        returnedValue = SD.dispatch(inputValy)
+
+
+    def test_100_001(self):
         output = SD.dispatch(42)
         self.assertTrue(output == {'error':'parameter is not a dictionary'})
 
