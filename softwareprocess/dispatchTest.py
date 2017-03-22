@@ -35,3 +35,7 @@ class DispatchTest(unittest.TestCase):
     def test_1211213(self):
         output = SD.dispatch(42)
         self.assertTrue(output == {'error':'parameter is not a dictionary'})
+
+    def test_2(self):
+        output = SD.dispatch({})
+        self.assertTrue(output == {'error': 'no op  is specified'})
