@@ -4,6 +4,7 @@
 """
 
 import re
+import math
 
 def dispatch(values=None):
 
@@ -30,3 +31,83 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
+
+    #
+    def adjust(values):
+        if 'alttitude' in values:
+            values['error'] = 'altitude already exists'
+            return values
+
+        if 'height' in values:
+            height = float(values['height'])
+            if height < 0:
+                values['error'] = 'height is invalid'
+                return values
+        else:
+            height = 0
+
+        if 'temperature' in values:
+            temp = int(values['temperature'])
+            if temp < -20 or temp > 120:
+                values['error'] = 'temperature is invalid'
+                return values
+        else:
+            temp = 72
+
+        if 'pressure' in values:
+            pres = int(values['pressure'])
+            if pres < 100 or pres > 1100:
+                values['error'] = 'pressure is invalid'
+                return values
+        else:
+            pres = 1010
+
+        if 'horizon' in values:
+            horizon = values['horizon']
+            if horizon != 'artificial' and horizon != 'natural':
+                values['error'] = 'horizon is invalid'
+                return values
+        else:
+            horizon = 'natural'
+
+        if 'observation' not in values:
+            values['error'] = 'missing observation'
+            return valuse
+
+        degreeAndminute = values['observation'].split('d')
+        degree = int(degreeAndminute[0])
+        minute = float(degreeAndminute[1])
+
+        if degree < 0 or degree >= 90:
+           values['error'] = 'degree is invalid'
+           return values
+
+        if minute < 0.0 or minute >= 60.0:
+            values['error'] = 'minute is invalid'
+            return values
+
+        # observation can't less than 0d0.1
+        if degree == 0 and minute <= 0.1:
+            values['error'] = 'observation is invalid'
+            return values
+
+        totalDegree = degree + (minute / 60.0)
+
+        if horizon == 'natural':
+            dip = (-0.97 * math.sqrt(height)) / 60.0
+        else:
+            dip = 0
+
+        refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree)
+        altitude = totalDegree + dip + refraction
+
+        alMin = round((altitude - math.floor(altitude)) * 60.0, 1)
+        alDeg = math.floor(altitude)
+        newAl = '%d'%(alDeg) + 'd' + '%.1f'%(alMin)
+        values['altitude'] = newAl
+        return values
+
+
+
+    def convert_to_celsius(i):
+        return (i - 32) * 5.0/9.0
