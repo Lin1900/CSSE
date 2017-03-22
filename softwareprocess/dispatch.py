@@ -38,9 +38,10 @@ def Adjust(values):
         if values['height'].isalpha():
             values['error'] = 'height is invalid'
             return values
-        if not values['height'].isdigit():
-            values['error'] = 'height is invalid'
-            return values
+    if isNumber(values['height']):
+ #       if not values['height'].isdigit():
+  #          values['error'] = 'height is invalid'
+   #         return values
         height = float(values['height'])
         if height < 0:
             values['error'] = 'height is invalid'
@@ -113,6 +114,13 @@ def Adjust(values):
     newAl = '%d'%(alDeg) + 'd' + '%.1f'%(alMin)
     values['altitude'] = newAl
     return values
+
+def isNumber(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 def convert_to_celsius(i):
     return (i - 32) * 5.0/9.0
