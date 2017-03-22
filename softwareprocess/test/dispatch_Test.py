@@ -28,9 +28,9 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(output == {'op': 'adjust', 'observation': '30d90.5', 'error': 'observation is invalid'})
 
     def test_200_001_validvalue(self):
-        input = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        input = {'observation': '30d1.5', 'height': '19', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         inputVal = SD.dispatch(input)
-        output = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        output = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         self.assertTrue(inputVal == output)
 
     def test_200_002_validvalue(self):
