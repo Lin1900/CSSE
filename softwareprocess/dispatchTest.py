@@ -5,17 +5,17 @@ class DispatchTest(unittest.TestCase):
     def test_dispatch100_000_emptyInput(self):
         inputVal = {}
         returnedValue = SD.dispatch(inputVal)
-        inputVal = {'error': 'no op  is specified'}
-        self.assertTrue(returnedValue == inputVal)
+        input = {'error': 'no op  is specified'}
+        self.assertTrue(returnedValue == input)
 
     def test_dispatch100_005_observationValueIllegal(self):
         inputVal = {'op': 'adjust', 'observation': '45d123.4'}
         returnedValue = SD.dispatch(inputVal)
-        expect == {'error': 'minute is invalid'}
-        self.assertTrue(returnedValue == expect)
+        input == {'error': 'minute is invalid'}
+        self.assertTrue(returnedValue == input)
 
     def test_dispatch100_003_validvalues(self):
         input = {'op': 'unknown'}
         output = SD.dispatch(input)
-        expect = {'erroe': 'op is not legal operation'}
-        self.assertTrue(output == expect)
+        input = {'erroe': 'op is not legal operation'}
+        self.assertTrue(output == input)
