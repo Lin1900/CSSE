@@ -54,7 +54,7 @@ def Adjust(values):
         pres = int(values['pressure'])
         if pres < 100 or pres > 1100:
              values['error'] = 'pressure is invalid'
-            return values
+             return values
     else:
         pres = 1010
 
@@ -72,7 +72,7 @@ def Adjust(values):
 
     if 'observation' not in values:
         values['error'] = 'missing observation'
-        return valuse
+        return values
 
     degreeAndminute = values['observation'].split('d')
     degree = int(degreeAndminute[0])
