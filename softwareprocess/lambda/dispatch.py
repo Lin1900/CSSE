@@ -32,12 +32,8 @@ def dispatch(values=None):
         values['error'] = 'op is not a legal operation'
         return values
 
-    #
+    # Adjusts the celestial sighting
     def adjust(values):
-        if 'alttitude' in values:
-            values['error'] = 'altitude already exists'
-            return values
-
         if 'height' in values:
             height = float(values['height'])
             if height < 0:
@@ -70,6 +66,10 @@ def dispatch(values=None):
         else:
             horizon = 'natural'
 
+        if 'alttitude' in values:
+            values['error'] = 'altitude already exists'
+            return values
+
         if 'observation' not in values:
             values['error'] = 'missing observation'
             return valuse
@@ -98,7 +98,7 @@ def dispatch(values=None):
         else:
             dip = 0
 
-        refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree)
+        refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree))
         altitude = totalDegree + dip + refraction
 
         # conver altitude
