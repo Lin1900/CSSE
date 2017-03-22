@@ -20,7 +20,7 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(output == {'error': 'minute is invalid'})
 
     def test_100_005(self):
-        output = SD.dispatch({'op':'adjust'})
+        output = SD.dispatch({'op': 'adjust'})
         self.assertTrue(output == {'error': 'mandatory information is missing'})
 
     def test_200_001_givenCase1(self):
