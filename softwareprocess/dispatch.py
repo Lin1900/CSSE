@@ -38,10 +38,10 @@ def Adjust(values):
         if values['height'].isalpha():
             values['error'] = 'height is invalid'
             return values
-    if isNumber(values['height']):
+        if not isNumber(values['height']):
  #       if not values['height'].isdigit():
-  #          values['error'] = 'height is invalid'
-   #         return values
+            values['error'] = 'height is invalid'
+            return values
         height = float(values['height'])
         if height < 0:
             values['error'] = 'height is invalid'
