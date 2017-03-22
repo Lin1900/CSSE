@@ -21,7 +21,7 @@ def dispatch(values=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        return adjustinput(values)    #<-------------- replace this with your implementation
+        return Adjust(values)   #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
@@ -32,8 +32,8 @@ def dispatch(values=None):
         values['error'] = 'op is not a legal operation'
         return values
 
-    # Adjusts the celestial sighting
-    def adjust(values):
+    # adjusts the celestial sighting
+    def Adjust(values):
         if 'height' in values:
             height = float(values['height'])
             if height < 0:
