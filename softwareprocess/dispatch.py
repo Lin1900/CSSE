@@ -71,7 +71,7 @@ def Adjust(values):
         return values
 
     if 'observation' not in values:
-        values['error'] = 'missing observation'
+        values['error'] = 'mandatory information is missing'
         return values
 
     degreeAndminute = values['observation'].split('d')
