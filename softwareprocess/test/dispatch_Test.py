@@ -16,8 +16,8 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(output == {'error': 'op is not a legal operation'})
 
     def test_100_004(self):
-        output = SD.dispatch({'op': 'adjust', 'observation': '100d46.4'})
-        self.assertTrue(output == {'error': 'observation is invalid'})
+        output = SD.dispatch({'observation': '100d46.4', 'op': 'adjust'})
+        self.assertTrue(output == {'observation': '100d46.4', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error': 'observation is invalid')
 
     def test_100_005(self):
         output = SD.dispatch({'op': 'adjust'})
