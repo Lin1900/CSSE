@@ -13,7 +13,7 @@ class DispatchTest(unittest.TestCase):
 
     def test_100_003(self):
         output = SD.dispatch({'op': 'unknown'})
-        self.assertTrue(output == {'error': 'op is not a legal operation'})
+        self.assertTrue(output == {'op': 'unknown', 'error': 'op is not a legal operation'})
 
     def test_100_004(self):
         output = SD.dispatch({'op': 'adjust'})
