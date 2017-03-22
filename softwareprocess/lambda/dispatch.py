@@ -21,7 +21,7 @@ def dispatch(values=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        return values    #<-------------- replace this with your implementation
+        return adjust(values)    #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
@@ -101,13 +101,14 @@ def dispatch(values=None):
         refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree)
         altitude = totalDegree + dip + refraction
 
+        # conver altitude
         alMin = round((altitude - math.floor(altitude)) * 60.0, 1)
         alDeg = math.floor(altitude)
         newAl = '%d'%(alDeg) + 'd' + '%.1f'%(alMin)
         values['altitude'] = newAl
         return values
 
-
-
     def convert_to_celsius(i):
         return (i - 32) * 5.0/9.0
+
+
