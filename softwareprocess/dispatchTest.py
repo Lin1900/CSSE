@@ -17,5 +17,5 @@ class DispatchTest(unittest.TestCase):
     def test_dispatch100_003_validvalues(self):
         input = {'op': 'unknown'}
         output = SD.dispatch(input)
-        expect = {'erroe': 'op is not a legal operation'}
+        expect = {'error': 'op is not a legal operation'}
         self.assertTrue(output == expect)
