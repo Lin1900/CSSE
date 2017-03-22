@@ -80,3 +80,9 @@ class DispatchTest(unittest.TestCase):
         inputVal = SD.dispatch(input)
         output = {'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'abc', 'op': 'adjust', 'temperature': '71', 'error': 'horizon is invalid'}
         self.assertTrue(inputVal == output)
+
+    def test_300_007_invalidvalue(self):
+        input = {'observation': '45d15.2', 'height': 'a6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
+        inputVal = SD.dispatch(input)
+        output = {'observation': '45d15.2', 'height': 'a6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error': 'height is invalid'}
+        self.assertTrue(inputVal == output)
