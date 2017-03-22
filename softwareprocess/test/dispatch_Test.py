@@ -1,5 +1,5 @@
 import unittest
-import softwareprocess.lambda.dispatch as SD
+import softwareprocess.dispatch as SD
 
 class DispatchTest(unittest.TestCase):
 
