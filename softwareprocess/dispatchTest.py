@@ -5,7 +5,7 @@ class DispatchTest(unittest.TestCase):
     def test_dispatch100_000_emptyInput(self):
         inputVal = {}
         returnedValue = SD.dispatch(inputVal)
-        inputVal = {'error': 'parameter is missing'}
+        inputVal = {'error': 'no op  is specified'}
         self.assertTrue(returnedValue == inputVal)
 
     def test_dispatch100_005_observationValueIllegal(self):
@@ -14,3 +14,4 @@ class DispatchTest(unittest.TestCase):
         inputVal == {'error': 'minute is invalid'}
         self.assertTrue(returnedValue == inputVal)
 
+    def test_dispatch100_003_
