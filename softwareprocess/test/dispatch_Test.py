@@ -25,7 +25,7 @@ class DispatchTest(unittest.TestCase):
 
     def test_100_006(self):
         output = SD.dispatch()
-        self.assertTrue(output == {'error': 'op is not a legal operation'})
+        self.assertTrue(output == {'error': 'parameter is missing'})
 
 
     def test_200_001_givenCase1(self):
