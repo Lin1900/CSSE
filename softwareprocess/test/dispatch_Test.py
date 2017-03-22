@@ -23,6 +23,9 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch()
         self.assertTrue(output == {'error': 'parameter is missing'})
 
+   def test_100_006(self):
+        output = SD.dispatch({'op': 'adjust','observation': '30d90.5'})
+        self.assertTrue(output == {'op': 'adjust','observation': '30d90.5', 'error': 'observation is invalid'})
 
     def test_200_001_validvalue(self):
         input = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
