@@ -79,11 +79,11 @@ def Adjust(values):
     minute = float(degreeAndminute[1])
 
     if degree < 0 or degree >= 90:
-        values['error'] = 'degree is invalid'
+        values['error'] = 'observation is invalid'
         return values
 
     if minute < 0.0 or minute >= 60.0:
-        values['error'] = 'minute is invalid'
+        values['error'] = 'observation is invalid'
         return values
 
     # observation can't less than 0d0.1
