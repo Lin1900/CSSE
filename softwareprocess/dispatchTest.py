@@ -32,10 +32,15 @@ class DispatchTest(unittest.TestCase):
         input = {'parameter is missing'}
         self.assertTrue(returnedValue == input)
 
-    def test_1211213(self):
+    def test_100_001(self):
         output = SD.dispatch(42)
         self.assertTrue(output == {'error':'parameter is not a dictionary'})
 
-    def test_2(self):
+    def test_100_002(self):
         output = SD.dispatch({})
         self.assertTrue(output == {'error': 'no op  is specified'})
+
+    def test_100_003(self):
+        output = SD.dispatch({'op': 'unknown'})
+        self.assertTrue(output == {'error': 'op is not a legal operation'})
+    
