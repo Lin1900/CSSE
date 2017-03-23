@@ -111,7 +111,7 @@ def Adjust(values):
     refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree))
     altitude = totalDegree + dip + refraction
 
-    # conver altitude
+    # convert altitude
     alMin = round((altitude - math.floor(altitude)) * 60.0, 1)
     alDeg = math.floor(altitude)
     newAl = '%d'%(alDeg) + 'd' + '%.1f'%(alMin)

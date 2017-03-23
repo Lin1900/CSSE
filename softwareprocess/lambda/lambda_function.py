@@ -1,7 +1,5 @@
+import dispatch as dispatch
 import re
-
-from softwareprocess import dispatch as dispatch
-
 
 def lambda_handler(event, context):
     try:
