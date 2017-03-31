@@ -38,8 +38,9 @@ def Adjust(values):
 #        if values['height'].isalpha():
 #            values['error'] = 'height is invalid'
 #            return values
+        # check there is only numbers in height
         if not isNumber(values['height']):
- #       if not values['height'].isdigit():
+#        if not values['height'].isdigit():
             values['error'] = 'height is invalid'
             return values
         height = float(values['height'])
@@ -51,6 +52,7 @@ def Adjust(values):
 
     if 'temperature' in values:
         temp = int(values['temperature'])
+        # check the temperature is in a valid range
         if temp < -20 or temp > 120:
             values['error'] = 'temperature is invalid'
             return values
@@ -59,6 +61,7 @@ def Adjust(values):
 
     if 'pressure' in values:
         pres = int(values['pressure'])
+        # check the pressure is in a valid range
         if pres < 100 or pres > 1100:
              values['error'] = 'pressure is invalid'
              return values
@@ -108,7 +111,7 @@ def Adjust(values):
     refraction = (-0.00452 * pres) / (273 + convert_to_celsius(temp)) / math.tan(math.radians(totalDegree))
     altitude = totalDegree + dip + refraction
 
-    # conver altitude
+    # convert altitude
     alMin = round((altitude - math.floor(altitude)) * 60.0, 1)
     alDeg = math.floor(altitude)
     newAl = '%d'%(alDeg) + 'd' + '%.1f'%(alMin)
