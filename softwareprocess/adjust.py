@@ -1,7 +1,7 @@
 import math
 import re
 
-def Adjust(values):
+def adjust(values):
     if 'height' in values:
 #        if values['height'].isalpha():
 #            values['error'] = 'height is invalid'
@@ -28,7 +28,7 @@ def Adjust(values):
         if temp < -20 or temp > 120:
             values['error'] = 'temperature is invalid'
             return values
-    else
+    else:
         temp = 72
 
     if 'pressure' in values:

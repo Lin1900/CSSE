@@ -5,7 +5,7 @@
 
 import math
 import re
-import adjust as Adjust
+import adjust as adjust
 
 def dispatch(values=None):
 
@@ -22,7 +22,7 @@ def dispatch(values=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        return adjust.Adjust(values)   #<-------------- replace this with your implementation
+        return adjust.adjust(values)   #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return values
         #return predict.Predict(values)    #This calculation is stubbed out
