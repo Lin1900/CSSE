@@ -1,7 +1,7 @@
 import math
 import re
 
-def adjust(values):
+def Adjust(values):
     if 'height' in values:
 #        if values['height'].isalpha():
 #            values['error'] = 'height is invalid'
