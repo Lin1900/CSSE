@@ -37,10 +37,10 @@ def Adjust(values):
         if not isNumber(values['pressure']):
             values['error'] = 'pressure is invalid'
             return values
+        pres = int(values['pressure'])
         if pres < 100 or pres > 1100:
              values['error'] = 'pressure is invalid'
              return values
-        pres = int(values['pressure'])
     else:
         pres = 1010
 
