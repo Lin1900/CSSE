@@ -24,7 +24,7 @@ def dispatch(values=None):
     if(values['op'] == 'adjust'):
         return adjust.Adjust(values)   #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
-        return values    #This calculation is stubbed out
+        return predict.Predict(values)    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
@@ -32,7 +32,7 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
-
+"""
     # adjusts the celestial sighting
 def Adjust(values):
     if 'height' in values:
@@ -128,5 +128,5 @@ def isNumber(s):
 
 def convert_to_celsius(i):
     return (i - 32) * 5.0/9.0
-
+"""
 
