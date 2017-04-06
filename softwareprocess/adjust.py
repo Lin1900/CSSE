@@ -1,40 +1,7 @@
-"""
-    Created on March 19, 2017
-    @author: Linyuan Zhang
-"""
-
 import math
 import re
-import adjust as adjust
 
-def dispatch(values=None):
-
-    #Validate parm
-    if(values == None):
-        return {'error': 'parameter is missing'}
-    if(not(isinstance(values,dict))):
-        return {'error': 'parameter is not a dictionary'}
-    if (not('op' in values)):
-        values['error'] = 'no op is specified'
-        return values
-
-
-
-    #Perform designated function
-    if(values['op'] == 'adjust'):
-        return adjust.Adjust(values)   #<-------------- replace this with your implementation
-    elif(values['op'] == 'predict'):
-        return values    #This calculation is stubbed out
-    elif(values['op'] == 'correct'):
-        return values    #This calculation is stubbed out
-    elif(values['op'] == 'locate'):
-        return values    #This calculation is stubbed out
-    else:
-        values['error'] = 'op is not a legal operation'
-        return values
-
-    # adjusts the celestial sighting
-def Adjust(values):
+def Adjust
     if 'height' in values:
 #        if values['height'].isalpha():
 #            values['error'] = 'height is invalid'
@@ -128,5 +95,3 @@ def isNumber(s):
 
 def convert_to_celsius(i):
     return (i - 32) * 5.0/9.0
-
-
