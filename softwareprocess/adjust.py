@@ -28,11 +28,11 @@ def Adjust(values):
         if temp < -20 or temp > 120:
             values['error'] = 'temperature is invalid'
             return values
-    else:
+    else
         temp = 72
 
     if 'pressure' in values:
-        pres = int(values['pressure'])
+        #pres = int(values['pressure'])
         # check the pressure is in a valid range
         if not isNumber(values['pressure']):
             values['error'] = 'pressure is invalid'
@@ -40,6 +40,7 @@ def Adjust(values):
         if pres < 100 or pres > 1100:
              values['error'] = 'pressure is invalid'
              return values
+        pres = int(values['pressure'])
     else:
         pres = 1010
 
