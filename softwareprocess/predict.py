@@ -81,7 +81,7 @@ def Predict(values):
         if not minute.isdigit() or len(minute) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(minute) >60 or int(minute) < 0:
+        if int(minute) > 60 or int(minute) < 0:
             values['error'] = 'time is invalid'
             return values
         # check second valid or not
@@ -101,15 +101,15 @@ def Predict(values):
     GHA = '100d42.6'
     SHA = getStar[1]
     latitude = getStar[2]
-    gapYear = int(year) - 2001
+    gapYear = year - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
     countLeapYear = gapYear / 4
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     totalPro = dailyRotation * countLeapYear
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     totalSecond1 = int(second) + int(minute) * 60 + int(hour) * 3600
-    epoch = datetime(int(year), 1, 1)
-    now = datetime(int(year), int(month), int(day))
+    epoch = datetime(year, 1, 1)
+    now = datetime(year, month, day)
     totalSecond2 = (now - epoch).total_second
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
@@ -150,8 +150,6 @@ def minuteToDegree(m):
     minute = (m - hour) * 60
     newm = str(hour) + 'd' +str(minute)
     return newm
-
-#def degreeFormat(f):
 
 
 
