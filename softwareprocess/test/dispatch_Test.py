@@ -104,3 +104,7 @@ class DispatchTest(unittest.TestCase):
         inputVal = SD.dispatch(input)
         output = {'observation': '10d15.2', 'height': '6', 'pressure': '1100', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71a', 'error': 'temperature is invalid'}
         self.assertTrue(inputVal == output)
+
+    def test_400_001(self):
+        output = SD.dispatch({'op': 'predict','body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'})
