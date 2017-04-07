@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6448492-b0b8-47be-9d65-3b413dd59b65" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/softwareprocess/try.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/dispatchTEST.py" afterPath="" />
@@ -14,8 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/predict.py" afterPath="$PROJECT_DIR$/softwareprocess/predict.py" />
     </list>
     <ignored path="CSSE.iws" />
@@ -63,8 +60,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="136" column="22" lean-forward="true" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
+            <state relative-caret-position="321">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -80,16 +77,6 @@
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="try.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/softwareprocess/try.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,8 +109,8 @@
         <option value="$PROJECT_DIR$/softwareprocess/predict_test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predict_test.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/predict.py" />
         <option value="$PROJECT_DIR$/softwareprocess/try.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/predict.py" />
       </list>
     </option>
   </component>
@@ -518,26 +505,11 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 09m 32s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 16h 03m 30s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 13m 39s.xml">
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 16h 04m 20s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 09m 59s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 10m 15s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 13m 41s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 13m 48s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 43m 49s.xml">
-      <configuration name="Unittests in test1" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 46m 01s.xml">
       <configuration name="Unittests in test1" configurationId="tests" />
@@ -546,6 +518,21 @@
       <configuration name="Unittests in test1" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 56m 20s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 16h 03m 32s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 16h 04m 22s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 16h 08m 50s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 16h 09m 20s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 16h 15m 57s.xml">
       <configuration name="Unittests in test1" configurationId="tests" />
     </history-entry>
   </component>
@@ -767,13 +754,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test1.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary.py">
@@ -817,6 +797,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/predict_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -827,18 +815,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/try.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        <state relative-caret-position="141">
+          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="136" column="22" lean-forward="true" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
+        <state relative-caret-position="321">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
