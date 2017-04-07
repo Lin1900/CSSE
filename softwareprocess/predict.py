@@ -95,7 +95,7 @@ def Predict(values):
             return values
 
 
-    getStar = read_txt(values['body'])
+    getStar = read_file(values['body'])
     if (getStar == -1):
         values['error'] = "star not in catalog"
         return values
@@ -123,8 +123,8 @@ def Predict(values):
     return values
 
 
-def read_txt(star):
-    star = star[0].upper() + star.lower()[1:]
+def read_file(star):
+    star = star[0].upper() + star.lower()
     fileName = os.path.join(os.path.dirname(__file__), 'stars.txt')
     Stars = open(fileName, 'r')
     for line in Stars:
