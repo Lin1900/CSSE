@@ -127,6 +127,7 @@ def read_file(star):
     Stars = open('stars.txt', 'r')
     for i in range(0, 60):
         line = Stars.readline()
+        print line
         newLine = line.split()
         if (newLine[0].lower() == star.lower()):
             return newLine
