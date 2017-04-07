@@ -123,7 +123,6 @@ def Predict(values):
 def read_txt(star):
     star = star[0].upper() + star.lower()[1:]
     Stars = open('stars')
-    starDict = {}
     for line in Stars:
         newLine = line.split()
         if (newLine[0] == star):
