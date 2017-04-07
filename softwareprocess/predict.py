@@ -1,7 +1,6 @@
 import math
 import datetime
 import re
-import os
 
 def Predict(values):
     if not 'body' in values:
@@ -126,8 +125,7 @@ def read_file(star):
     #filePath = os.path.dirname('stars.txt')
     #filePath = '/Users/LinyuanZhang/Desktop/6700projects/CSSE/softwareprocess'
     Stars = open('stars.txt', 'r')
-
-    for line in Stars:
+    for line in Stars.readlines():
         newLine = line.split()
         if (newLine[0].lower() == star.lower()):
             return newLine

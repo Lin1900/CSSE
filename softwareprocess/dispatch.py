@@ -26,6 +26,7 @@ def dispatch(values=None):
         return adjust.Adjust(values)   #<-------------- replace this with your implementation
     elif(values['op'] == 'predict'):
         return predict.Predict(values)    #This calculation is stubbed out
+        #return values
     elif(values['op'] == 'correct'):
         return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
