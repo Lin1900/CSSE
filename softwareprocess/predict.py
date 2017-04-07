@@ -122,14 +122,13 @@ def Predict(values):
     values['lat'] = latitude
     return values
 
-
 def read_file(star):
-    star = star[0].upper() + star.lower()
-    fileName = os.path.join(os.path.dirname(__file__), 'stars.txt')
-    Stars = open(fileName, 'r')
+    filePath = os.path.dirname(__file__)
+    print filePath
+    Stars = open(filePath, 'r')
     for line in Stars:
         newLine = line.split()
-        if (newLine[0] == star):
+        if (newLine[0].lower() == star.lower()):
             return newLine
     Stars.close()
     return -1

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6448492-b0b8-47be-9d65-3b413dd59b65" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/softwareprocess/try.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/dispatchTEST.py" afterPath="" />
@@ -13,6 +14,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/predict.py" afterPath="$PROJECT_DIR$/softwareprocess/predict.py" />
     </list>
@@ -49,7 +51,7 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="120">
               <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#66#77#0" expanded="true" />
@@ -61,8 +63,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="126" column="41" lean-forward="false" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
+            <state relative-caret-position="306">
+              <caret line="136" column="22" lean-forward="true" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -74,10 +76,20 @@
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/predict_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+              <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="try.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/softwareprocess/try.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -111,13 +123,14 @@
         <option value="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/test/predict_test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/predict.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/try.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="51" />
-    <option name="y" value="30" />
-    <option name="width" value="978" />
+    <option name="x" value="13" />
+    <option name="y" value="32" />
+    <option name="width" value="1031" />
     <option name="height" value="714" />
   </component>
   <component name="ProjectView">
@@ -135,6 +148,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,7 +195,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -505,28 +518,10 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 04m 22s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 04m 26s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 05m 40s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 08m 10s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 08m 58s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 09m 10s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 09m 16s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 09m 32s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 15h 13m 39s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 09m 59s.xml">
@@ -535,15 +530,33 @@
     <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 10m 15s.xml">
       <configuration name="Unittests in test1" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 13m 41s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 13m 48s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 43m 49s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 46m 01s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 53m 11s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_test1 - 2017.04.07 at 15h 56m 20s.xml">
+      <configuration name="Unittests in test1" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="30" width="978" height="714" extended-state="0" />
+    <frame x="13" y="32" width="1031" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20794149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19702971" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38969404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.273752" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27858293" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -600,7 +613,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test1.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -777,14 +789,7 @@
     <entry file="file://$PROJECT_DIR$/softwareprocess/lambda/dispatch.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/dispatchTEST.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/predict_test.py" />
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/stars.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540">
@@ -804,7 +809,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="120">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="e#66#77#0" expanded="true" />
@@ -815,17 +820,25 @@
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/predict_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="47" lean-forward="true" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
+          <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="126" column="41" lean-forward="false" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
+        <state relative-caret-position="306">
+          <caret line="136" column="22" lean-forward="true" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
