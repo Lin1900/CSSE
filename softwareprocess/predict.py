@@ -125,7 +125,8 @@ def read_file(star):
     #filePath = os.path.dirname('stars.txt')
     #filePath = '/Users/LinyuanZhang/Desktop/6700projects/CSSE/softwareprocess'
     Stars = open('stars.txt', 'r')
-    for line in Stars.readlines():
+    for i in range(0, 60):
+        line = Stars.readline()
         newLine = line.split()
         if (newLine[0].lower() == star.lower()):
             return newLine
