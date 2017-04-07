@@ -94,7 +94,13 @@ class DispatchTest(unittest.TestCase):
 #        self.assertTrue(inputVal == output)
 
     def test_300_0011_invalidvalue(self):
-        input = {'observation': '10d15.2', 'height': '6', 'pressure': '1100', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
+        input = {'observation': '10d15.2', 'height': '6', 'pressure': '110aa', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
         inputVal = SD.dispatch(input)
-        output = {'observation': '10d15.2', 'height': '6', 'pressure': '1100', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error': 'pressure is invalid'}
+        output = {'observation': '10d15.2', 'height': '6', 'pressure': '110aa', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error': 'pressure is invalid'}
+        self.assertTrue(inputVal == output)
+
+    def test_300_0021_invalidvalue(self):
+        input = {'observation': '10d15.2', 'height': '6', 'pressure': '1100', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71a'}
+        inputVal = SD.dispatch(input)
+        output = {'observation': '10d15.2', 'height': '6', 'pressure': '1100', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71a', 'error': 'temperature is invalid'}
         self.assertTrue(inputVal == output)
