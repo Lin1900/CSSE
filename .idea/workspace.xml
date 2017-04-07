@@ -12,12 +12,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/CSSE.iml" afterPath="$PROJECT_DIR$/.idea/CSSE.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/dispatch.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/predict.py" afterPath="$PROJECT_DIR$/softwareprocess/predict.py" />
     </list>
     <ignored path="CSSE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +47,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="127" column="32" lean-forward="false" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -462,12 +457,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.All Tests (TDD)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.convertString2Dictionary" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest MyTestCase.test200_004InvalidParameter_DuplicateKey" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in putput" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest MyTestCase.test100_001ValidParameterWithOnePair" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in test1" />
+      <item index="0" class="java.lang.String" itemvalue="Python.convertString2Dictionary" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest MyTestCase.test200_004InvalidParameter_DuplicateKey" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in putput" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest MyTestCase.test100_001ValidParameterWithOnePair" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test1" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.All Tests (TDD)" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -795,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="127" column="32" lean-forward="false" selection-start-line="127" selection-start-column="32" selection-end-line="127" selection-end-column="32" />
           <folding />
         </state>
       </provider>
