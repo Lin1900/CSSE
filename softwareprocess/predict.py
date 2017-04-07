@@ -124,6 +124,7 @@ def Predict(values):
 def read_file(star):
     #filePath = os.path.dirname('stars.txt')
     #filePath = '/Users/LinyuanZhang/Desktop/6700projects/CSSE/softwareprocess'
+    os.path.join(os.path.dirname(__file__), 'stars.txt')
     Stars = open('stars.txt', 'r')
     for i in range(0, 60):
         line = Stars.readline()
