@@ -2,7 +2,7 @@ import unittest
 import softwareprocess.dispatch as SD
 import math
 
-class redictTest(unittest.TestCase):
+class predictTest(unittest.TestCase):
     def test_100_001(self):
         output = SD.dispatch(42)
         self.assertTrue(output == {'error': 'parameter is not a dictionary'})
