@@ -122,6 +122,7 @@ def Predict(values):
 
 def read_txt(star):
     star = star[0].upper() + star.lower()[1:]
+    fileName = 
     Stars = open('stars')
     for line in Stars:
         newLine = line.split()
