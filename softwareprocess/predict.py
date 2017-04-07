@@ -4,7 +4,7 @@ import re
 
 def Predict(values):
     if not 'body' in values:
-        values['error'] = 'Mandatory is missing'
+        values['error'] = 'Mandatory information is missing'
         return values
     if 'lat' in values:
         values['error'] = 'Latitude is invalid'

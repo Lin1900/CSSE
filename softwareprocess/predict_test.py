@@ -17,12 +17,12 @@ class redictTest(unittest.TestCase):
 
     def test_100_004(self):
         output = SD.dispatch({'op': 'predict'})
-        self.assertTrue(output == {'op': 'adjust', 'error': 'mandatory is missing'})
+        self.assertTrue(output == {'op': 'predict', 'error': 'Mandatory information is missing'})
 
     def test_100_005(self):
         output = SD.dispatch()
         self.assertTrue(output == {'error': 'parameter is missing'})
 
     def test_100_006(self):
-        output = SD.dispatch({'op': 'predict','observation': '30d90.5'})
-        self.assertTrue(output == {'op': 'adjust', 'observation': '30d90.5', 'error': 'observation is invalid'})
+        output = SD.dispatch({'op': 'predict','body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'})
