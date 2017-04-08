@@ -69,7 +69,7 @@ def Predict(values):
     now = datetime.date(years,months,days)
     countDay = int((now - epoch).days)
     totalSecond = countDay * 86400 + hours * 3600 + minutes * 60 + seconds
-    countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0')
+    countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0.00')
     # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
     # Calculate the star's GHA
