@@ -139,17 +139,17 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-b4-20', 'time': '01:03:42', 'error': 'date is invalid'})
 
     def test_400_009(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-30', 'time': '03:61:42'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-30', 'time': '03:61:42', 'error': 'time is invalid'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '206-11-30', 'time': '03:61:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '206-11-30', 'time': '03:61:42', 'error': 'date is invalid'})
 
     def test_400_010(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-12-21', 'time': '03:15:61'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-12-21', 'time': '03:15:61', 'error': 'time is invalid'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-2-21', 'time': '03:15:61'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-2-21', 'time': '03:15:61', 'error': 'date is invalid'})
 
     def test_400_011(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2000-12-17', 'time': '03:15:42'})
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2000-12-17', 'time': '03:15:42', 'error': 'date is invalid'})
 
     def test_400_012(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-12', 'time': '03:115:42'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-12', 'time': '03:115:42', 'error': 'time is invalid'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:115:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:115:42', 'error': 'date is invalid'})
