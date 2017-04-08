@@ -128,6 +128,15 @@ def degreeToMinute(n):
     hour = int(degree[0])
     minute = float(degree[1])
     if hour != 0:
+        if hour < 0:
+            newDegree = -1 * (abs(hour) + minute / 60)
+    newDegree = hour + minute / 60
+    return newDegree
+"""
+    degree = n.split('d')
+    hour = int(degree[0])
+    minute = float(degree[1])
+    if hour != 0:
         if hour > 0:
             newDegree = hour + minute/60
         else:
@@ -136,15 +145,7 @@ def degreeToMinute(n):
         newDegree = abs(minute/60)
     return newDegree
 """
-    degree = n.split('d')
-    hour = int(degree[0])
-    minute = float(degree[1])
-    if hour != 0:
-        if hour < 0:
-            newDegree = -1 * (abs(hour) + minute / 60)
-    newDegree = hour + minute / 60
-    return newDegree
-"""
+
 def minuteToDegree(m):
     degree = math.floor(m)
     if m < 0:
