@@ -145,20 +145,6 @@ class DispatchTest(unittest.TestCase):
         }
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test300_060_ShouldAssignDefaultTime(self):
-        input = {
-            'op': 'predict',
-            'body': 'Nunki',
-            'date': '2011-04-05'
-        }
-        output = {
-            'body': 'Nunki',
-            'date': '2011-04-05',
-            'lat': '-26d16.4',
-            'long': '268d52.8',
-            'op': 'predict'
-        }
-        self.assertDictEqual(SD.dispatch(input), output)
 
     def test300_070_ShouldSupportCaseInsensitiveStar(self):
         input = {
