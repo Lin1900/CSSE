@@ -195,7 +195,7 @@ class DispatchTest(unittest.TestCase):
             'date': '2016-01-17',
             'time': '03:15:42',
             'long': '32d3.33',
-            'error': 'Latitude is invalid'
+            'error': 'Long is invalid'
         }
         self.assertDictEqual(SD.dispatch(input), output)
 
