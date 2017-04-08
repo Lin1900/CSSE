@@ -120,7 +120,7 @@ class DispatchTest(unittest.TestCase):
 
     def test_400_004(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '52:16:1'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '52:16:1', 'error': 'time is invalid'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '24:16:1', 'error': 'time is invalid'})
 
 
     def test_400_0010(self):
@@ -128,76 +128,11 @@ class DispatchTest(unittest.TestCase):
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test300_070_ShouldSupportCaseInsensitiveStar(self):
-        input = {
-            'op': 'predict',
-            'body': 'betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42'
-        }
-        output = {
-            'op':'predict',
-            'body': 'betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'long': '75d53.6',
-            'lat': '7d24.3'
-        }
+    def test_400_0010(self):
+        input = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
+        output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'date is invalid'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-
-    def test300_070_ShouldSupportCaseInsensitiveStar(self):
-        input = {
-            'op': 'predict',
-            'body': 'betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42'
-        }
-        output = {
-            'op':'predict',
-            'body': 'betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'long': '75d53.6',
-            'lat': '7d24.3'
-        }
-        self.assertDictEqual(SD.dispatch(input), output)
-
-    def test300_910_ShouldReturnLatLongExistsError(self):
-        input = {
-            'op': 'predict',
-            'body': 'Betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'lat': '32d3.33'
-        }
-        output = {
-            'op':'predict',
-            'body': 'Betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'lat': '32d3.33',
-            'error': 'Latitude is invalid'
-        }
-        self.assertDictEqual(SD.dispatch(input), output)
-
-    def test300_920_ShouldReturnLatLongExistsError(self):
-        input = {
-            'op': 'predict',
-            'body': 'Betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'long': '32d3.33'
-        }
-        output = {
-            'op':'predict',
-            'body': 'Betelgeuse',
-            'date': '2016-01-17',
-            'time': '03:15:42',
-            'long': '32d3.33',
-            'error': 'Longitude is invalid'
-        }
-        self.assertDictEqual(SD.dispatch(input), output)
 
 
 """
