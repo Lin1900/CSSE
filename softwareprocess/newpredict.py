@@ -44,21 +44,21 @@ def Predict(values):
         if checkTime(time) == -1:
             values['error'] = 'time is invalid'
             return values
-    year = int(date[0])
-    month = int(date[1])
-    day = int(date[2])
-    hour = int(time[0])
-    minute = int(time[1])
-    second = int(time[2])
-    gapYear = year - 2001
+    years = int(date[0])
+    months = int(date[1])
+    days = int(date[2])
+    hours = int(time[0])
+    minutes = int(time[1])
+    seconds = int(time[2])
+    gapYear = years - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
     countLeapYear = gapYear / 4
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     totalPro = dailyRotation * countLeapYear
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
-    totalSecond1 = second + minute * 60 + hour * 3600
-    epoch = datetime(year, 1, 1)
-    now = datetime(year, month, day)
+    totalSecond1 = seconds + minutes * 60 + hours * 3600
+    epoch = datetime(years, 1, 1)
+    now = datetime(years, months, days)
     totalSecond2 = (now - epoch).total_second
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
