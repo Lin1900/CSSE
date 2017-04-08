@@ -62,10 +62,10 @@ def Predict(values):
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     # Calculate the angle (include total second)
     totalSecond1 = seconds + minutes * 60 + hours * 3600
-    epoch = datetime(years, 1, 1)
-    now = datetime(years, months, days)
-    totalSecond2 = (now - epoch).total_seconds()
-    #totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
+    #epoch = datetime(years, 1, 1)
+    #now = datetime(years, months, days)
+    #totalSecond2 = (now - epoch).total_seconds()
+    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     # Calculate total GHA(2016-01-17)
@@ -160,4 +160,59 @@ def minuteToDegree(m):
     newm = str(hour) + 'd' +str(minute)
     return newm
 """
+def isLeapYear(s):
+    if s % 4 != 0:
+        return -1
 
+def totalDays(m, y):
+    if isLeapYear(y) != -1:
+        if m == 1:
+            return 0
+        if m == 2:
+            return 31
+        if m == 3:
+            return 31 + 29
+        if m == 4:
+            return 31 + 29 + 31
+        if m == 5:
+            return 31 + 29 + 31 + 30
+        if m == 6:
+            return 31 + 29 + 31 + 30 + 31
+        if m == 7:
+            return 31 + 29 + 31 + 30 + 31 + 30
+        if m == 8:
+            return 31 + 29 + 31 + 30 + 31 + 30 + 31
+        if m == 9:
+            return 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31
+        if m == 10:
+            return 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30
+        if m == 11:
+            return 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
+        if m == 12:
+            return 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 +30
+
+    if isLeapYear(y) == -1:
+        if m == 1:
+            return 0
+        if m == 2:
+            return 31
+        if m == 3:
+            return 31 + 28
+        if m == 4:
+            return 31 + 28 + 31
+        if m == 5:
+            return 31 + 28 + 31 + 30
+        if m == 6:
+            return 31 + 28 + 31 + 30 + 31
+        if m == 7:
+            return 31 + 28 + 31 + 30 + 31 + 30
+        if m == 8:
+            return 31 + 28 + 31 + 30 + 31 + 30 + 31
+        if m == 9:
+            return 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31
+        if m == 10:
+            return 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30
+        if m == 11:
+            return 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31
+        if m == 12:
+            return 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 +30
