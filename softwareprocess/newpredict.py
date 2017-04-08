@@ -153,11 +153,11 @@ def minuteToDegree(degree):
     if '-' in minute:
         minute = minute.replace('-', '')
     newMinute = minute.split('.')
-    var1 = minute[0].zfill(2)
-    var2 = minute[1]
-    minute = var1 + '.' + var2
+    min1 = minute[0].zfill(2)
+    min2 = minute[1]
+    newMinute = min1 + '.' + min2
     degree = int(degree) - 360
-    degree = str(degree) + 'd' + minute
+    degree = str(degree) + 'd' + newMinute
     return degree
 
 
