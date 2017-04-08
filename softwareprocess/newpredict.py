@@ -101,16 +101,16 @@ def checkDate(dates):
     if not day.isdigit() or len(day) != 2:
         return -1
     day = int(day)
-    if month == 01 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == '12':
+    if month == '01' or month == '03' or month == '05' or month == '07' or month == '08' or month == '10' or month == '12':
         if day != 31:
            return -1
-    if month == 2 and year % 4 == 0:     #check leap year
+    if month == '02' and int(year) % 4 == 0:     #check leap year
         if day != 29:
             return -1
-    if month == 02 and year % 4 == 0:
+    if month == '02' and int(year) % 4 == 0:
         if day != 28:
             return -1
-    if month == 4 or month == 6 or month == 9 or month == 11:
+    if month == '04' or month == '06' or month == '09' or month == '11':
         if day != 30:
             return -1
 
