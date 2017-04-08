@@ -155,7 +155,8 @@ def minuteToDegree(degree):
     var1 = minute[0].zfill(2)
     var2 = minute[1]
     minute = var1 + '.' + var2
-    degree = str(int(degree)) + 'd' + minute
+    degree = int(degree) - 360
+    degree = str(degree) + 'd' + minute
     return degree
 """
     degree = n.split('d')
