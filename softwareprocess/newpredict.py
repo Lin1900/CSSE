@@ -44,6 +44,7 @@ def Predict(values):
         if checkTime(time) == -1:
             values['error'] = 'time is invalid'
             return values
+"""
     years = int(date[0])
     months = int(date[1])
     days = int(date[2])
@@ -68,7 +69,7 @@ def Predict(values):
     values['long'] = newStarGHA
     values['lat'] = latitude
     return values
-
+"""
 
 def checkDate(dates):
     year = dates[0]    #check year
