@@ -18,3 +18,4 @@ def Predict(values):
     if 'long' in values:
         values['error'] = 'Longitude is invalid'
         return values
+
