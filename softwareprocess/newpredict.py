@@ -23,8 +23,7 @@ def Predict(values):
         values['date'] = '2001-01-01'
     else:
         date = values['date'].split('-')
-
-
+        if len(date)
 
 def checkDate(dates):
     if len(dates) != 3:

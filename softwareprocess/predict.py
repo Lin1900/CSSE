@@ -18,7 +18,7 @@ def Predict(values):
         values['date'] = '2001-01-01'
     if 'date' in values:
         date = values['date'].split('-')
-        if len(date) != 3:
+        if not len(date) == 3:
             values['error'] = 'date is invalid'
             return values
         #check 'year' valid or not
@@ -32,7 +32,7 @@ def Predict(values):
         year = int(year)
         #check 'month' valid or not
         month = date[1]
-        if len(month) != 2:
+        if not len(month) == 2:
             values['error'] = 'date is invalid'
             return values
         if not month.isdigit() or int(month) > 12 or int(month) < 0:
@@ -41,7 +41,7 @@ def Predict(values):
         month = int(month)
         #check 'day' valid or not
         day = (date[2])
-        if not day.isdigit() or len(day) != 2:
+        if not day.isdigit() or not len(day) == 2:
             values['error'] = 'date is invalid'
             return values
         day = int(day)
@@ -53,12 +53,12 @@ def Predict(values):
             if day != 29:
                 values['error'] = 'date is invalid'
                 return values
-        if month == 02 and year % 4 != 0:
-            if day != 28:
+        if month == 02 and year % 4 == 0:
+            if not day == 28:
                 values['error'] = 'date is invalid'
                 return values
         if month == 4 or month == 6 or month == 9 or month == 11:
-            if day != 30:
+            if not day == 30:
                 values['error'] = 'date is invalid'
                 return values
 
@@ -66,12 +66,12 @@ def Predict(values):
         values['time'] = '00:00:00'
     if 'time' in values:
         time = values['time'].split(':')
-        if len(time) != 3:
+        if not len(time) == 3:
             values['error'] = 'time is invalid'
             return values
         # check hour valid or not
         hour = time[0]
-        if not hour.isdigit() or len(hour) != 2:
+        if not hour.isdigit() or not len(hour) == 2:
             values['error'] = 'time is invalid'
             return values
         hour = int(hour)
@@ -80,7 +80,7 @@ def Predict(values):
             return values
         # check minutes valid or not
         minute = time[1]
-        if not minute.isdigit() or len(minute) != 2:
+        if not minute.isdigit() or  not len(minute) == 2:
             values['error'] = 'time is invalid'
             return values
         minute = int(minute)
@@ -89,7 +89,7 @@ def Predict(values):
             return values
         # check second valid or not
         second = time[2]
-        if not second.isdigit() or len(second) != 2:
+        if not second.isdigit() or not len(second) == 2:
             values['error'] = 'time is invalid'
             return values
         second = int(second)

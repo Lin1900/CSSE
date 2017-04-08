@@ -6,7 +6,7 @@
 import math
 import re
 import adjust as adjust
-import newpredict as predict
+import predict as predict
 
 def dispatch(values=None):
 
