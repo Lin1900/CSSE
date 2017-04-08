@@ -65,7 +65,7 @@ def Predict(values):
     # epoch = datetime(years, 1, 1)
     # now = datetime(years, months, days)
     # totalSecond2 = (now - epoch).total_seconds()
-    totalSecond2 = totalDays(months, years) +
+    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     # Calculate total GHA(2016-01-17)
@@ -149,11 +149,11 @@ def minuteToDegree(m):
     return newm
 """
 def isLeapYear(s):
-    if s % 4 != 0
+    if s % 4 != 0:
         return -1
 
 def totalDays(m, y):
-    if isLeapYear(y) != -1
+    if isLeapYear(y) != -1:
         if m == 1:
             return 0
         if m == 2:
@@ -179,7 +179,7 @@ def totalDays(m, y):
         if m == 12:
             return 31 + 29 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 +30
 
-    if isLeapYear(y) == -1
+    if isLeapYear(y) == -1:
         if m == 1:
             return 0
         if m == 2:
