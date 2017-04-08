@@ -62,12 +62,10 @@ def Predict(values):
     # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     # Calculate the angle (include total second)
-    totalSecond1 = seconds + minutes * 60 + hours * 3600
+#    totalSecond1 = seconds + minutes * 60 + hours * 3600
     #epoch = datetime(years, 1, 1)
     #now = datetime(years, months, days)
     #totalSecond2 = (now - epoch).total_seconds()
-#    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
- #   totalSecond = totalSecond1 + totalSecond2
     beginningOfTheYear = datetime.date(years,1,1)
     currentDate = datetime.date(years,months,days)
     diff = currentDate - beginningOfTheYear
