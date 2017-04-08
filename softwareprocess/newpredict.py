@@ -161,8 +161,4 @@ def minuteToDegree(degree):
     return degree
 
 
-def isLeapYear(s):
-    if s % 4 != 0:
-        return -1
-
 
