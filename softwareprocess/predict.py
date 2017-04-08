@@ -124,7 +124,7 @@ def Predict(values):
 
 def read_file(star):
     filePath = os.path.dirname(__file__)
-    Stars = open(filePath + "/stars.txt")
+    Stars = open(filePath + /stars.txt)
     for i in range(0, 60):
         line = Stars.readline()
         newLine = line.split()
