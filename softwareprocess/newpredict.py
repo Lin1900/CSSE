@@ -1,5 +1,6 @@
 import math
 import StarsTable
+import datetime
 
 def Predict(values):
     if 'body' not in values:
