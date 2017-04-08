@@ -67,8 +67,8 @@ def Predict(values):
     #totalSecond2 = (now - epoch).total_seconds()
     epoch = datetime.date(years,1,1)
     now = datetime.date(years,months,days)
-    diff = now - epoch
-    dayGap = int(diff.days)
+    #diff = now - epoch
+    dayGap = int((now - epoch).days)
     totalSecond = dayGap * 86400 + hours * 3600 + minutes * 60 + seconds
 #    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0')
