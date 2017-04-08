@@ -108,7 +108,11 @@ class DispatchTest(unittest.TestCase):
     def test_400_001(self):
         output = SD.dispatch({'op': 'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertTrue(output == {'op': 'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'})
-'''
+
+    def test_400_012(self):
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'error': 'date is invalid'})
+"""
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
@@ -149,7 +153,7 @@ class DispatchTest(unittest.TestCase):
     def test_400_011(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-2-21', 'time': '13:07:30'})
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-2-21', 'time': '13:07:30', 'error': 'date is invalid'})
-'''
+"""
     def test_400_012(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2'})
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'error': 'date is invalid'})
