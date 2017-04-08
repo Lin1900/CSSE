@@ -53,7 +53,7 @@ def Predict(values):
     seconds = int(time[2])
     gapYear = years - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
-    countLeapYear = gapYear / 4
+    countLeapYear = int(gapYear / 4)
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     totalPro = dailyRotation * countLeapYear
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
