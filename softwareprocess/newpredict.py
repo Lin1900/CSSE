@@ -133,14 +133,16 @@ def checkTime(times):
 
 def degreeToMinute(n):
     degree = n.split('d')
+    deg = degree[0]
+    newDeg = int(deg)
     minute = float(degree[1])
-    if int(degree[0]) != 0:
-        if degree[0] < 0:
-            degree = int(degree[0]) - minute / 60
+    if newDeg != 0:
+        if deg[0] < 0:
+            degree = newDeg - minute / 60
         else:
-            degree = int(degree[0]) + minute / 60
+            degree = newDeg + minute / 60
     else:
-        if degree[0][0] == '-':
+        if deg[0] == '-':
             degree = - minute / 60
         else:
             degree = minute / 60
@@ -150,7 +152,7 @@ def minuteToDegree(degree):
     minute = str("{:.1f}".format((degree - int(degree)) * 60))
     if '-' in minute:
         minute = minute.replace('-', '')
-    minute = minute.split('.')
+    newMinute = minute.split('.')
     var1 = minute[0].zfill(2)
     var2 = minute[1]
     minute = var1 + '.' + var2

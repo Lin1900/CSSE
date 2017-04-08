@@ -226,3 +226,16 @@ def totalDays(m, y):
         if m == 12:
             return 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 +30
 
+degree = n.split('d')
+    minute = float(degree[1])
+    if int(degree[0]) != 0:
+        if degree[0] < 0:
+            degree = int(degree[0]) - minute / 60
+        else:
+            degree = int(degree[0]) + minute / 60
+    else:
+        if degree[0][0] == '-':
+            degree = - minute / 60
+        else:
+            degree = minute / 60
+    return degree

@@ -128,10 +128,6 @@ class DispatchTest(unittest.TestCase):
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test_400_0011(self):
-        input = {'op': 'predict', 'body': 'Procyon', 'date': '2018-05-22', 'time': '12:43:33'}
-        output = {'op': 'predict', 'body': 'Procyon', 'date': '2018-05-22', 'time': '12:43:33', 'long': '315d55.5', 'lat': '5d10.9'}
-        self.assertDictEqual(SD.dispatch(input), output)
 """
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
