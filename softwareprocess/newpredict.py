@@ -15,7 +15,6 @@ def Predict(values):
         values['error'] = 'star not in catalog'
         return values
     star = getStar(starName).split(',')
-    GHA = '100d42.6'
     SHA = star[0]
     latitude = star[1]
 
@@ -63,6 +62,7 @@ def Predict(values):
     # dailyRotation = degreeToMinute('0d59.0')
     totalPro = dailyRotation * countLeapYear
     # Calculate GHA(2016-01-01)
+    GHA = '100d42.6'
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     #   Calculate the angle (include total second)
     #epoch = datetime(years, 1, 1)
