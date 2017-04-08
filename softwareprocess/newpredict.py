@@ -11,7 +11,7 @@ def Predict(values):
     if starName not in StarsTable.stars:
         values['error'] = 'star not in catalog'
         return values
-    star = StarsTable.getStarData(starName).split(',')
+    star = StarsTable.getStar(starName).split(',')
     GHA = '100d42.6'
     SHA = star[0]
     latitude = star[1]
