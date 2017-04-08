@@ -157,7 +157,7 @@ def Predict(values):
             return values
 
     star = values['body'][0].upper() + values['body'][1:].lower()
-    if star not in stars:
+    if starName not in stars:
         values['error'] = 'star not in catalog'
         return values
     newStar = stars[star].split(',')
