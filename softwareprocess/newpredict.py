@@ -68,10 +68,10 @@ def Predict(values):
     #epoch = datetime(years, 1, 1)
     #now = datetime(years, months, days)
     #totalSecond2 = (now - epoch).total_seconds()
-    epoch = datetime.date(years,1,1)
-    nowDate = datetime.date(years, months, days)
-    countDay = int((nowDate - epoch).days)
-    totalSecond = countDay * 86400 + hours * 3600 + minutes * 60 + seconds
+    #epoch = datetime.date(years,1,1)
+    #nowDate = datetime.date(years, months, days)
+    #countDay = int((nowDate - epoch).days)
+    totalSecond = calculateDay(years, months, days) * 86400 + hours * 3600 + minutes * 60 + seconds
     countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0.00')
     # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
@@ -81,6 +81,12 @@ def Predict(values):
     values['long'] = newStarGHA
     values['lat'] = latitude
     return values
+
+def calculateDay(y, m, d):
+    epoch = datetime.date(y, 1, 1)
+    nowDate = datetime.date(y, m, d)
+    countDay = int((nowDate - epoch).days)
+    return countDay
 
 
 def checkDate(dates):
