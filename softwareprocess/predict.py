@@ -157,7 +157,7 @@ def Predict(values):
             values['error'] = 'time is invalid'
             return values
 
-    star = values['body'][0].upper() + values['body'].lower()[1:]
+    star = values['body'][0].upper() + values['body'][1:].lower()
     if star not in stars:
         values['error'] = 'star not in catalog'
         return values
