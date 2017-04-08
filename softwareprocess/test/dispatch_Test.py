@@ -109,13 +109,14 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch({'op': 'predict','body': 'abc', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertTrue(output == {'op': 'predict', 'body': 'abc', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'})
 
+    def test_400_003(self):
+        output = SD.dispatch({'op': 'predict','body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
+
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict'})
         self.assertTrue(output == {'op': 'predict', 'error': 'Mandatory information is missing'})
 
-    def test_400_003(self):
-        output = SD.dispatch({'op': 'predict','body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
 
     def test_400_004(self):
         output = SD.dispatch({'op': 'predict','body': 'Betelgeuse', 'date': '2016-13-17', 'time': '03:15:42'})
