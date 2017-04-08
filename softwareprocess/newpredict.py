@@ -104,17 +104,16 @@ def checkDate(dates):
     if month == '01' or month == '03' or month == '05' or month == '07' or month == '08' or month == '10' or month == '12':
         if day > 31:
            return -1
-"""
     if month == '02' and int(year) % 4 == 0:     #check leap year
-        if day != 29:
+        if day > 29:
             return -1
     if month == '02' and int(year) % 4 != 0:
-        if day != 28:
+        if day > 28:
             return -1
     if month == '04' or month == '06' or month == '09' or month == '11':
-        if day != 30:
+        if day > 30:
             return -1
-"""
+
 def checkTime(times):
     hour = times[0]      #check hour
     if not hour.isdigit() or len(hour) != 2:
