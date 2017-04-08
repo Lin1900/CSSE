@@ -58,9 +58,9 @@ def Predict(values):
     totalPro = dailyRotation * countLeapYear
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     totalSecond1 = seconds + minutes * 60 + hours * 3600
-    epoch = datetime(years, 1, 1)
-    now = datetime(years, months, days)
-    totalSecond2 = (now - epoch).total_second
+    epoch = datetime.date(years, 1, 1)
+    now = datetime.date(years, months, days)
+    totalSecond2 = int((now - epoch).days) * 86400
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     newGHA = nowGHA + countRotation
