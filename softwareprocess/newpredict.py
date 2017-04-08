@@ -66,3 +66,38 @@ def Predict(values):
             if day != 30:
                 values['error'] = 'date is invalid'
                 return values
+
+    if 'time' not in values:
+        values['time'] = '00:00:00'
+    else:
+        time = values['time'].split(':')
+        if len(time) != 3:
+            values['error'] = 'time is invalid'
+            return values
+        # check hour valid or not
+        hour = time[0]
+        if not hour.isdigit() or len(hour) != 2:
+            values['error'] = 'time is invalid'
+            return values
+        hour = int(hour)
+        if hour >= 24 or hour < 0:
+            values['error'] = 'time is invalid'
+            return values
+        # check minutes valid or not
+        minute = time[1]
+        if not minute.isdigit() or len(minute) != 2:
+            values['error'] = 'time is invalid'
+            return values
+        minute = int(minute)
+        if minute >= 60 or minute < 0:
+            values['error'] = 'time is invalid'
+            return values
+        # check second valid or not
+        second = time[2]
+        if not second.isdigit() or len(second) != 2:
+            values['error'] = 'time is invalid'
+            return values
+        second = int(second)
+        if second >= 60 or second < 0:
+            values['error'] = 'time is invalid'
+            return values
