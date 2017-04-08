@@ -67,10 +67,8 @@ def Predict(values):
     #totalSecond2 = (now - epoch).total_seconds()
     epoch = datetime.date(years,1,1)
     now = datetime.date(years,months,days)
-    #diff = now - epoch
-    dayGap = int((now - epoch).days)
-    totalSecond = dayGap * 86400 + hours * 3600 + minutes * 60 + seconds
-#    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
+    countDay = int((now - epoch).days)
+    totalSecond = countDay * 86400 + hours * 3600 + minutes * 60 + seconds
     countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0')
     # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
