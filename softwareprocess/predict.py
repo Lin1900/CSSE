@@ -1,9 +1,10 @@
 import math
 import datetime
 import re
-# import os
+
 
 def Predict(values):
+"""
     stars = {
         'Alpheratz': '357d41.7,29d10.9',
         'Ankaa': '353d14.1,-42d13.4',
@@ -65,7 +66,7 @@ def Predict(values):
         'Scheat'	:'13d51.8,28d10.3',
         'Markab'	:'13d36.7,15d17.6'
     }
-
+"""
     if not 'body' in values:
         values['error'] = 'Mandatory information is missing'
         return values
