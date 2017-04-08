@@ -12,8 +12,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/newpredict.py" afterPath="$PROJECT_DIR$/softwareprocess/newpredict.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" afterPath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
     </list>
     <ignored path="CSSE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newpredict.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newpredict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/newpredict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="76" column="109" lean-forward="false" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="109" />
+            <state relative-caret-position="45">
+              <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch_Test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch_Test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="137" column="97" lean-forward="true" selection-start-line="137" selection-start-column="97" selection-end-line="137" selection-end-column="97" />
+            <state relative-caret-position="323">
+              <caret line="132" column="113" lean-forward="false" selection-start-line="132" selection-start-column="113" selection-end-line="132" selection-end-column="113" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -133,13 +133,13 @@
         <option value="$PROJECT_DIR$/softwareprocess/StarsTable.py" />
         <option value="$PROJECT_DIR$/softwareprocess/dispatch.py" />
         <option value="$PROJECT_DIR$/softwareprocess/predict.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/newpredict.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="378" />
+    <option name="x" value="331" />
     <option name="y" value="23" />
     <option name="width" value="1064" />
     <option name="height" value="723" />
@@ -529,27 +529,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 51m 25s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 53m 33s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 55m 11s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 57m 16s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 58m 20s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 01m 51s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 03m 22s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 11m 52s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -559,9 +538,30 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 15m 33s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 18m 43s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 19m 14s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 20m 41s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 21m 09s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 21m 35s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 25m 37s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 26m 21s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="378" y="23" width="1064" height="723" extended-state="0" />
+    <frame x="331" y="23" width="1064" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.022051774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -856,22 +856,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/newpredict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="137" column="97" lean-forward="true" selection-start-line="137" selection-start-column="97" selection-end-line="137" selection-end-column="97" />
+        <state relative-caret-position="45">
+          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/newpredict.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="76" column="109" lean-forward="false" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="109" />
+        <state relative-caret-position="323">
+          <caret line="132" column="113" lean-forward="false" selection-start-line="132" selection-start-column="113" selection-end-line="132" selection-end-column="113" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
