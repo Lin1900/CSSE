@@ -56,7 +56,8 @@ def Predict(values):
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
     # Take into account leap years
     countLeapYear = int(gapYear / 4)
-    dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
+    #dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
+    dailyRotation = 
     totalPro = dailyRotation * countLeapYear
     # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
@@ -140,7 +141,7 @@ def degreeToMinute(n):
             degree = minute / 60
     return degree
 
-def degreeToString(degree):
+def minuteToDegree(degree):
     minute = str("{:.1f}".format((degree - int(degree)) * 60))
     if '-' in minute:
         minute = minute.replace('-', '')
