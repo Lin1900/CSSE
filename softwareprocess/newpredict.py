@@ -57,7 +57,7 @@ def Predict(values):
     # Take into account leap years
     countLeapYear = int(gapYear / 4)
     #dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
-    dailyRotation = 
+    dailyRotation = degreeToMinute('0d59.0')
     totalPro = dailyRotation * countLeapYear
     # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
