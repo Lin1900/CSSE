@@ -111,15 +111,15 @@ def Predict(values):
             if day != 31:
                 values['error'] = 'date is invalid'
                 return values
-        elif month == 2 and year % 4 == 0:     #check leap year
+        if month == 2 and year % 4 == 0:     #check leap year
             if day != 29:
                 values['error'] = 'date is invalid'
                 return values
-        elif month == 02 and year % 4 != 0:
+        if month == 02 and year % 4 != 0:
             if day != 28:
                 values['error'] = 'date is invalid'
                 return values
-        else:
+        if month == 4 or month == 6 or month == 9 or month == 11:
             if day != 30:
                 values['error'] = 'date is invalid'
                 return values
