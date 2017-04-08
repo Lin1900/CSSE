@@ -56,8 +56,8 @@ def Predict(values):
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
     # Take into account leap years
     countLeapYear = int(gapYear / 4)
-    #dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
-    dailyRotation = degreeToMinute('0d59.0')
+    dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
+    # dailyRotation = degreeToMinute('0d59.0')
     totalPro = dailyRotation * countLeapYear
     # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
@@ -66,8 +66,13 @@ def Predict(values):
     #epoch = datetime(years, 1, 1)
     #now = datetime(years, months, days)
     #totalSecond2 = (now - epoch).total_seconds()
-    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
-    totalSecond = totalSecond1 + totalSecond2
+#    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
+ #   totalSecond = totalSecond1 + totalSecond2
+    beginningOfTheYear = datetime.date(years,1,1)
+    currentDate = datetime.date(years,months,days)
+    diff = currentDate - beginningOfTheYear
+    dayGap = int(diff.days)
+    totalSecond = dayGap * 86400 + hours * 3600 + minutes * 60 + seconds
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
