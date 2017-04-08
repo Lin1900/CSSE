@@ -107,7 +107,7 @@ def checkDate(dates):
     if month == '02' and int(year) % 4 == 0:     #check leap year
         if day != 29:
             return -1
-    if month == '02' and int(year) % 4 == 0:
+    if month == '02' and int(year) % 4 != 0:
         if day != 28:
             return -1
     if month == '04' or month == '06' or month == '09' or month == '11':
