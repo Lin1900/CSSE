@@ -123,13 +123,10 @@ def Predict(values):
     return values
 
 def read_file(star):
-    #filePath = os.path.dirname('stars.txt')
-    #filePath = '/Users/LinyuanZhang/Desktop/6700projects/CSSE/softwareprocess'
-    filePath = os.path.join(os.path.dirname(__file__), 'stars.txt')
-    Stars = open(filePath, 'r')
+    filePath = os.path.dirname(__file__)
+    Stars = open(filePath + '/stars.txt')
     for i in range(0, 60):
         line = Stars.readline()
-        print line
         newLine = line.split()
         if (newLine[0].lower() == star.lower()):
             return newLine
