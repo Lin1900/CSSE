@@ -157,6 +157,12 @@ def Predict(values):
             values['error'] = 'time is invalid'
             return values
 
+    star = values['body'][0].upper() + values['body'].lower()[1:]
+    if star not in stars:
+        values['error'] = 'star not in catalog'
+        return values
+    latitude = stars[star].split(',')[1]
+    SHA = stars[star].split(',')[0]
 
     #getStar = read_file(values['body'])
     #if (getStar == -1):
@@ -164,8 +170,8 @@ def Predict(values):
       #  return values
 
     GHA = '100d42.6'
-    SHA = getStar[1]
-    latitude = getStar[2]
+    #SHA = getStar[1]
+    #latitude = getStar[2]
     gapYear = year - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
     countLeapYear = gapYear / 4
