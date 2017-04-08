@@ -144,6 +144,22 @@ class DispatchTest(unittest.TestCase):
             'lat': '7d24.3'
         }
         self.assertDictEqual(SD.dispatch(input), output)
+
+    def test300_060_ShouldAssignDefaultTime(self):
+        input = {
+            'op': 'predict',
+            'body': 'Nunki',
+            'date': '2011-04-05'
+        }
+        output = {
+            'body': 'Nunki',
+            'date': '2011-04-05',
+            'lat': '-26d16.4',
+            'long': '268d52.8',
+            'op': 'predict'
+        }
+        self.assertDictEqual(SD.dispatch(input), output)
+
 """
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
