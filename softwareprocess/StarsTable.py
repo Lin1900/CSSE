@@ -61,5 +61,3 @@ stars = {
     'Markab'	:'13d36.7,15d17.6'
 }
 
-#def getStar(star):
- #   return stars[star]
