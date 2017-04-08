@@ -123,7 +123,12 @@ def checkTime(times):
     if int(second) >= 60 or int(second) < 0:
         return -1
 
+
+
 def degreeToMinute(n):
+    degree = n.split('d')
+    minute = float(degree[1])
+"""
     degree = n.split('d')
     hour = int(degree[0])
     minute = float(degree[1])
@@ -132,7 +137,7 @@ def degreeToMinute(n):
             newDegree = -1 * (abs(hour) + minute / 60)
     newDegree = hour + minute / 60
     return newDegree
-"""
+
     degree = n.split('d')
     hour = int(degree[0])
     minute = float(degree[1])
@@ -147,6 +152,12 @@ def degreeToMinute(n):
 """
 
 def minuteToDegree(m):
+    degree = str(m).split('.')
+    hour = int(degree[0])
+    minute = (m - hour) * 60
+    newm = str(hour) + 'd' +str(minute)
+    return newm
+"""
     degree = math.floor(m)
     if m < 0:
        degree = math.ceil(m)
@@ -155,12 +166,7 @@ def minuteToDegree(m):
     newDegree = '%dd%.1f' % (redegree, minute)
     return newDegree
 """
-    degree = str(m).split('.')
-    hour = int(degree[0])
-    minute = (m - hour) * 60
-    newm = str(hour) + 'd' +str(minute)
-    return newm
-"""
+
 def isLeapYear(s):
     if s % 4 != 0:
         return -1
