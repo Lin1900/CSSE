@@ -73,7 +73,8 @@ def Predict(values):
     diff = currentDate - beginningOfTheYear
     dayGap = int(diff.days)
     totalSecond = dayGap * 86400 + hours * 3600 + minutes * 60 + seconds
-    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
+#    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
+    countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d00.0')
     # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
     # Calculate the star's GHA

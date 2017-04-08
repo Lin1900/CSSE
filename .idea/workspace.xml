@@ -12,6 +12,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/SampleTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/newpredict.py" afterPath="$PROJECT_DIR$/softwareprocess/newpredict.py" />
     </list>
     <ignored path="CSSE.iws" />
@@ -72,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/softwareprocess/newpredict.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="74" column="72" lean-forward="false" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+              <caret line="76" column="109" lean-forward="false" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="109" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -83,8 +84,8 @@
       <file leaf-file-name="dispatch_Test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
-              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state relative-caret-position="259">
+              <caret line="137" column="97" lean-forward="true" selection-start-line="137" selection-start-column="97" selection-end-line="137" selection-end-column="97" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -138,9 +139,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="455" />
+    <option name="x" value="378" />
     <option name="y" value="23" />
-    <option name="width" value="987" />
+    <option name="width" value="1064" />
     <option name="height" value="723" />
   </component>
   <component name="ProjectView">
@@ -528,9 +529,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 41m 23s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.07 at 23h 51m 25s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -558,12 +556,15 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 12m 36s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.08 at 00h 15m 33s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="455" y="23" width="987" height="723" extended-state="0" />
+    <frame x="378" y="23" width="1064" height="723" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.023809524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.022051774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25603864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -618,7 +619,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/softwareprocess/newpredict.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -850,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state relative-caret-position="259">
+          <caret line="137" column="97" lean-forward="true" selection-start-line="137" selection-start-column="97" selection-end-line="137" selection-end-column="97" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -861,7 +869,7 @@
     <entry file="file://$PROJECT_DIR$/softwareprocess/newpredict.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="74" column="72" lean-forward="false" selection-start-line="74" selection-start-column="72" selection-end-line="74" selection-end-column="72" />
+          <caret line="76" column="109" lean-forward="false" selection-start-line="76" selection-start-column="109" selection-end-line="76" selection-end-column="109" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
