@@ -54,21 +54,20 @@ def Predict(values):
     # Determine angular difference for each year
     gapYear = years - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
-    # Take into account leap years
+    #    Take into account leap years
     countLeapYear = int(gapYear / 4)
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     # dailyRotation = degreeToMinute('0d59.0')
     totalPro = dailyRotation * countLeapYear
     # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
-    # Calculate the angle (include total second)
-#    totalSecond1 = seconds + minutes * 60 + hours * 3600
+    #   Calculate the angle (include total second)
     #epoch = datetime(years, 1, 1)
     #now = datetime(years, months, days)
     #totalSecond2 = (now - epoch).total_seconds()
-    beginningOfTheYear = datetime.date(years,1,1)
-    currentDate = datetime.date(years,months,days)
-    diff = currentDate - beginningOfTheYear
+    epoch = datetime.date(years,1,1)
+    now = datetime.date(years,months,days)
+    diff = now - epoch
     dayGap = int(diff.days)
     totalSecond = dayGap * 86400 + hours * 3600 + minutes * 60 + seconds
 #    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
