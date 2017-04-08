@@ -124,6 +124,18 @@ def checkTime(times):
         return -1
 
 def degreeToMinute(n):
+    degree = d.split('d')
+    hour = int(degree[0])
+    minute = float(degree[1])
+    if hour != 0:
+        if hour > 0:
+            newDegree = hour + minute/60
+        else:
+            newDegree = hour - minute/60
+    else:
+        newDegree = abs(minute/60)
+    return newDegree
+"""
     degree = n.split('d')
     hour = int(degree[0])
     minute = float(degree[1])
@@ -132,7 +144,7 @@ def degreeToMinute(n):
             newDegree = -1 * (abs(hour) + minute / 60)
     newDegree = hour + minute / 60
     return newDegree
-
+"""
 def minuteToDegree(m):
     degree = math.floor(m)
     if m < 0:
