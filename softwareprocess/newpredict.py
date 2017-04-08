@@ -10,7 +10,10 @@ def Predict(values):
     if starName not in StarsTable.stars:
         values['error'] = 'star not in catalog'
         return values
-    #star = StarsTable.getStarData(starName).split(',')
+    star = StarsTable.getStarData(starName).split(',')
+    GHA = '100d42.6'
+    SHA = star[0]
+    latitude = star[1]
 
     if 'lat' in values:
         values['error'] = 'Latitude is invalid'
@@ -40,6 +43,30 @@ def Predict(values):
         if checkTime(time) == -1:
             values['error'] = 'time is invalid'
             return values
+    year = int(date[0])
+    month = int(date[1])
+    day = int(date[2])
+    hour = int(time[0])
+    minute = int(time[1])
+    second = int(time[2])
+    gapYear = year - 2001
+    diffAngular = gapYear * degreeToMinute('-0d14.31667')
+    countLeapYear = gapYear / 4
+    dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
+    totalPro = dailyRotation * countLeapYear
+    nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
+    totalSecond1 = second + minute * 60 + hour * 3600
+    epoch = datetime(year, 1, 1)
+    now = datetime(year, month, day)
+    totalSecond2 = (now - epoch).total_second
+    totalSecond = totalSecond1 + totalSecond2
+    countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
+    newGHA = nowGHA + countRotation
+    starGHA = newGHA + degreeToMinute(SHA)
+    newStarGHA = minuteToDegree(starGHA)
+    values['long'] = newStarGHA
+    values['lat'] = latitude
+    return values
 
 
 def checkDate(dates):
@@ -86,3 +113,23 @@ def checkTime(times):
         return -1
     if int(second) >= 60 or int(second) < 0:
         return -1
+
+def degreeToMinute(d):
+    degree = d.split('d')
+    hour = int(degree[0])
+    minute = float(degree[1])
+    if hour != 0:
+        if hour > 0:
+            newDegree = hour + minute/60
+        else:
+            newDegree = hour - minute/60
+    else:
+        newDegree = abs(minute/60)
+    return newDegree
+
+def minuteToDegree(m):
+    degree = str(m).split('.')
+    hour = int(degree[0])
+    minute = (m - hour) * 60
+    newm = str(hour) + 'd' +str(minute)
+    return newm
