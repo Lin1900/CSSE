@@ -97,7 +97,7 @@ def Predict(values):
         if len(month) != 2:
             values['error'] = 'date is invalid'
             return values
-        if not month.isdigit() or int(month) >12 or int(month) < 0:
+        if not month.isdigit() or int(month) > 12 or int(month) < 0:
             values['error'] = 'date is invalid'
             return values
         month = int(month)
@@ -136,7 +136,8 @@ def Predict(values):
         if not hour.isdigit() or len(hour) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(hour) >= 24 or int(hour) < 0:
+        hour = int(hour)
+        if hour >= 24 or hour < 0:
             values['error'] = 'time is invalid'
             return values
         # check minutes valid or not
@@ -144,7 +145,8 @@ def Predict(values):
         if not minute.isdigit() or len(minute) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(minute) >= 60 or int(minute) < 0:
+        minute = int(minute)
+        if minute >= 60 or minute < 0:
             values['error'] = 'time is invalid'
             return values
         # check second valid or not
@@ -152,7 +154,8 @@ def Predict(values):
         if not second.isdigit() or len(second) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(second) >= 60 or int(second) < 0:
+        second = int(second)
+        if second >= 60 or second < 0:
             values['error'] = 'time is invalid'
             return values
 
@@ -179,7 +182,7 @@ def Predict(values):
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     totalPro = dailyRotation * countLeapYear
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
-    totalSecond1 = int(second) + int(minute) * 60 + int(hour) * 3600
+    totalSecond1 = second + minute * 60 + hour * 3600
     epoch = datetime(year, 1, 1)
     now = datetime(year, month, day)
     totalSecond2 = (now - epoch).total_second
