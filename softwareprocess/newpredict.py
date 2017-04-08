@@ -51,19 +51,25 @@ def Predict(values):
     hours = int(time[0])
     minutes = int(time[1])
     seconds = int(time[2])
+    # Determine angular difference for each year
     gapYear = years - 2001
     diffAngular = gapYear * degreeToMinute('-0d14.31667')
+    # Take into account leap years
     countLeapYear = int(gapYear / 4)
     dailyRotation = abs(degreeToMinute('360d0.00') - (86164.1/86400) * degreeToMinute('360d00.0'))
     totalPro = dailyRotation * countLeapYear
+    # Calculate GHA(2016-01-01)
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
+    # Calculate the angle (include total second)
     totalSecond1 = seconds + minutes * 60 + hours * 3600
-    epoch = datetime.date(years, 1, 1)
-    now = datetime.date(years, months, days)
-    totalSecond2 = int((now - epoch).days) * 86400
+    epoch = datetime(years, 1, 1)
+    now = datetime(years, months, days)
+    totalSecond2 = (now - epoch).total_seconds() * 86400
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
+    # Calculate total GHA(2016-01-17)
     newGHA = nowGHA + countRotation
+    # Calculate the star's GHA
     starGHA = newGHA + degreeToMinute(SHA)
     newStarGHA = minuteToDegree(starGHA)
     values['long'] = newStarGHA
@@ -116,22 +122,28 @@ def checkTime(times):
     if int(second) >= 60 or int(second) < 0:
         return -1
 
-def degreeToMinute(d):
-    degree = d.split('d')
+def degreeToMinute(n):
+    degree = n.split('d')
     hour = int(degree[0])
     minute = float(degree[1])
     if hour != 0:
-        if hour > 0:
-            newDegree = hour + minute/60
-        else:
-            newDegree = hour - minute/60
-    else:
-        newDegree = abs(minute/60)
+        if hour < 0:
+            newDegree = -1 * (abs(hour) + minute / 60)
+    newDegree = hour + minute / 60
     return newDegree
 
 def minuteToDegree(m):
+    degree = math.floor(m)
+    if m < 0:
+       degree = math.ceil(m)
+    redegree = degree * 360
+    minute = abs(round((m - degree) * 60, 1))
+    newDegree = '%dd%.1f' % (redegree, minute)
+    return newDegree
+"""
     degree = str(m).split('.')
     hour = int(degree[0])
     minute = (m - hour) * 60
     newm = str(hour) + 'd' +str(minute)
     return newm
+"""
