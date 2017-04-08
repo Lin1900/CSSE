@@ -128,6 +128,22 @@ class DispatchTest(unittest.TestCase):
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'}
         self.assertDictEqual(SD.dispatch(input), output)
 
+    def test300_070_ShouldSupportCaseInsensitiveStar(self):
+        input = {
+            'op': 'predict',
+            'body': 'betelgeuse',
+            'date': '2016-01-17',
+            'time': '03:15:42'
+        }
+        output = {
+            'op':'predict',
+            'body': 'betelgeuse',
+            'date': '2016-01-17',
+            'time': '03:15:42',
+            'long': '75d53.6',
+            'lat': '7d24.3'
+        }
+        self.assertDictEqual(SD.dispatch(input), output)
 """
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
