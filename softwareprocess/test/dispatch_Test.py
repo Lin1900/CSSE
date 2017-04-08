@@ -151,5 +151,5 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(output, {'op': 'predict', 'body': 'Betelgeuse', 'date': '2014-2-21', 'time': '13:75:80', 'error': 'date is invalid'})
 
     def test_400_012(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:115:42'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:115:42', 'error': 'date is invalid'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:11:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2003-04-2', 'time': '03:11:42', 'error': 'date is invalid'})
