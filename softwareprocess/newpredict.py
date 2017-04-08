@@ -2,6 +2,9 @@ import math
 import StarsTable
 import datetime
 
+def getStar(star):
+    return StarsTable.stars[star]
+
 def Predict(values):
     if 'body' not in values:
         values['error'] = 'Mandatory information is missing'
@@ -11,7 +14,7 @@ def Predict(values):
     if starName not in StarsTable.stars:
         values['error'] = 'star not in catalog'
         return values
-    star = StarsTable.getStar(starName).split(',')
+    star = getStar(starName).split(',')
     GHA = '100d42.6'
     SHA = star[0]
     latitude = star[1]
