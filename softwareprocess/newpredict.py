@@ -69,7 +69,7 @@ def Predict(values):
     #now = datetime(years, months, days)
     #totalSecond2 = (now - epoch).total_seconds()
     epoch = datetime.date(years,1,1)
-    nowDate = datetime.date(years,months,days)
+    nowDate = datetime.date(years, months, days)
     countDay = int((nowDate - epoch).days)
     totalSecond = countDay * 86400 + hours * 3600 + minutes * 60 + seconds
     countRotation = (totalSecond - int(totalSecond / 86164.1) * 86164.1) / 86164.1 * degreeToMinute('360d0.00')
