@@ -62,10 +62,10 @@ def Predict(values):
     nowGHA = degreeToMinute(GHA) + diffAngular + totalPro
     # Calculate the angle (include total second)
     totalSecond1 = seconds + minutes * 60 + hours * 3600
-    # epoch = datetime(years, 1, 1)
-    # now = datetime(years, months, days)
-    # totalSecond2 = (now - epoch).total_seconds()
-    totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
+    epoch = datetime(years, 1, 1)
+    now = datetime(years, months, days)
+    totalSecond2 = (now - epoch).total_seconds()
+    #totalSecond2 = (totalDays(months, years) + days) * 24 * 3600
     totalSecond = totalSecond1 + totalSecond2
     countRotation = totalSecond / (86164.1) * degreeToMinute('360d00.0')
     # Calculate total GHA(2016-01-17)
