@@ -119,8 +119,8 @@ class DispatchTest(unittest.TestCase):
 
 
     def test_400_004(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '33:15:42'})
-        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '33:15:42', 'error': 'time is invalid'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '24:15:42'})
+        self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '24:15:42', 'error': 'time is invalid'})
 
 
 """
