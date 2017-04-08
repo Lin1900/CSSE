@@ -30,6 +30,16 @@ def Predict(values):
             values['error'] = 'date is invalid'
             return values
 
+    if 'time' not in values:
+        values['time'] = '00:00:00'
+    else:
+        time = values['time'].split(':')
+        if not len(time) == 3:
+            values['error'] = 'time is invalid'
+            return values
+        if checkTime(time) == -1:
+            values['error'] = 'time is invalid'
+            return values
 
 
 def checkDate(dates):
@@ -59,3 +69,20 @@ def checkDate(dates):
     if month == 4 or month == 6 or month == 9 or month == 11:
         if day != 30:
             return -1
+
+def checkTime(times):
+    hour = times[0]      #check hour
+    if not hour.isdigit() or len(hour) != 2:
+        return -1
+    if int(hour) >= 24 or int(hour) < 0:
+        return -1
+    minute = times[1]    #check minute
+    if not minute.isdigit() or len(minute) != 2:
+        return -1
+    if int(minute) >= 60 or int(minute) < 0:
+        return -1
+    second = times[2]    #check second
+    if not second.isdigit() or len(second) != 2:
+        return -1
+    if int(second) >= 60 or int(second) < 0:
+        return -1
