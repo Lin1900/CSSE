@@ -144,7 +144,7 @@ def Predict(values):
         if not minute.isdigit() or len(minute) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(minute) > 60 or int(minute) < 0:
+        if int(minute) >= 60 or int(minute) < 0:
             values['error'] = 'time is invalid'
             return values
         # check second valid or not
@@ -152,7 +152,7 @@ def Predict(values):
         if not second.isdigit() or len(second) != 2:
             values['error'] = 'time is invalid'
             return values
-        if int(second) > 60 or int(second) < 0:
+        if int(second) >= 60 or int(second) < 0:
             values['error'] = 'time is invalid'
             return values
 
