@@ -163,6 +163,24 @@ class DispatchTest(unittest.TestCase):
         }
         self.assertDictEqual(SD.dispatch(input), output)
 
+    def test300_910_ShouldReturnLatLongExistsError(self):
+        input = {
+            'op': 'predict',
+            'body': 'Betelgeuse',
+            'date': '2016-01-17',
+            'time': '03:15:42',
+            'lat': '32d3.33'
+        }
+        output = {
+            'op':'predict',
+            'body': 'Betelgeuse',
+            'date': '2016-01-17',
+            'time': '03:15:42',
+            'lat': '32d3.33',
+            'error': 'lat or long already exists in the input'
+        }
+        self.assertDictEqual(SD.dispatch(input), output)
+
 
 """
     def test_400_002(self):
