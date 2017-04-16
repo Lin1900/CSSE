@@ -155,6 +155,11 @@ class DispatchTest(unittest.TestCase):
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2004-06-31', 'time': '03:15:42', 'error': 'date is invalid'}
         self.assertDictEqual(SD.dispatch(input), output)
 
+    def test300_120ShouldPredictTheLocation(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
+        data = SD.dispatch(values).get('long').split('d')
+        result = int(data[0]) + float(data[1]) / 60
+        self.assertAlmostEqual(result, 75.8933333333, delta=0.895)
 
 """
     def test_400_002(self):
