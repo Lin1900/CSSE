@@ -182,6 +182,104 @@ class DispatchTest(unittest.TestCase):
         result = int(data[0]) + float(data[1]) / 60
         self.assertAlmostEqual(result, 227.023333333, delta=2.023333333)
 
+    # sad path
+    def test300_900ShouldReturnErrorIfMandatoryInformationIsMissing(self):
+        values = {'op': 'predict'}
+        expectedDictionary = {'error':'mandatory information is missing', 'op': 'predict'}
+        self.assertDictEqual(SD.dispatch(values), expectedDictionary)
+
+    def test300_910ShouldReturnIfBodyIsNumeric(self):
+        values = {'op': 'predict', 'body': 42}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_920ShouldReturnIfBodyIsInvalid(self):
+        values = {'op': 'predict', 'body': 'unknown'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_930ShouldReturnErrorWhenDateHasIncorrectFormat(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': 'aa', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_940ShouldReturnErrorIfDateIsNumeric(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': 42, 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_950ShouldReturnErrorWhenYearInDateIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': 'aa-09-17', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_960ShouldReturnErrorWhenYearIsLT2001(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2000-09-17', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_970ShouldReturnErrorWhenFebruaryHasLeapDayWhenItIsNotInLeapYear(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-29', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_980ShouldReturnErrorWhenMonthInDateIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2001-aa-17', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_990ShouldReturnErrorWhenMonthInDateIsGT12(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-35-13', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1000ShouldReturnErrorWhenDayInDateIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-08-aa', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1010ShouldReturnErrorWhenDayInDateIsGT31(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-08-99', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1020ShouldReturnErrorForMonthsThatDoesNotHave31Days(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-04-31', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1030ShouldReturnErrorWhenFebruaryHasMoreThan29Days(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-02-30', 'time': '03:15:42'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1040ShouldReturnErrorIfTimeHasIncorrectFormat(self):
+        values = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': 'aa'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1050ShouldReturnErrorIfTimeIsNumeric(self):
+        values = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': 19}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1060ShouldReturnErrorIfHourInTimeIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': 'aa:15:34'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1070ShouldReturnErrorIfHourInTimeGT24(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '25:15:02'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1080ShouldReturnErrorIfMinuteInTimeIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '25:aa:02'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1090ShouldReturnErrorIfMinuteInTimeIsGT59(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '03:61:02'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1100ShouldReturnErrorIfSecondInTimeIsInvalid(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '03:15:aa'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1110ShouldReturnErrorIfSecondInTimeIsGT59(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '03:15:99'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1120ShouldReturnErrorIfLatitudeIsInInputDictionary(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '02:15:02', 'lat':'7d24.3'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
+    def test300_1130ShouldReturnErrorIfLongitudeIsInInputDictionary(self):
+        values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '02:15:02', 'long':'75d53.6'}
+        self.assertTrue(SD.dispatch(values).has_key("error"), True)
+
 
 """
     def test_400_002(self):
