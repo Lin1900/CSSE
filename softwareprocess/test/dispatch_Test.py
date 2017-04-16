@@ -123,22 +123,22 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-11-17', 'time': '21:-22:1', 'error': 'time is invalid'})
 
 
-    def test_400_0010(self):
+    def test_500_0010(self):
         input = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test_500_0010(self):
+    def test_500_0020(self):
         input = {'op': 'predict', 'body': '42', 'date': '2016-01-17', 'time': '03:15:42'}
         output = {'op': 'predict', 'body': '42', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test_500_0020(self):
+    def test_500_0030(self):
         input = {'op': 'predict', 'body': 'Betelgeuse', 'date': '42', 'time': '03:15:42'}
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '42', 'time': '03:15:42', 'error': 'date is invalid'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-    def test_500_0030(self):
+    def test_500_0040(self):
         input = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '42'}
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '42', 'error': 'time is invalid'}
         self.assertDictEqual(SD.dispatch(input), output)
