@@ -155,7 +155,7 @@ class DispatchTest(unittest.TestCase):
         output = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2004-06-31', 'time': '03:15:42', 'error': 'date is invalid'}
         self.assertDictEqual(SD.dispatch(input), output)
 
-
+"""
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
         values = {'op': 'predict', 'body': 'Betelgeuse'}
         self.assertEqual(SD.dispatch(values)['lat'], '7d24.3')
@@ -281,7 +281,7 @@ class DispatchTest(unittest.TestCase):
         self.assertTrue(SD.dispatch(values).has_key("error"), True)
 
 
-"""
+
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertDictEqual(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
