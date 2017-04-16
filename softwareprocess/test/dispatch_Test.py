@@ -130,8 +130,8 @@ class DispatchTest(unittest.TestCase):
         self.assertDictEqual(SD.dispatch(input), output)
 
     def test_500_0020(self):
-        input = {'op': 'predict', 'body': '42', 'date': '2016-01-17', 'time': '03:15:42'}
-        output = {'op': 'predict', 'body': '42', 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'}
+        input = {'op': 'predict', 'body': 42, 'date': '2016-01-17', 'time': '03:15:42'}
+        output = {'op': 'predict', 'body': 42, 'date': '2016-01-17', 'time': '03:15:42', 'error': 'star not in catalog'}
         self.assertDictEqual(SD.dispatch(input), output)
 
     def test_500_0030(self):
