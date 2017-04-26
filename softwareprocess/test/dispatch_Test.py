@@ -1,4 +1,3 @@
-
 import unittest
 import softwareprocess.dispatch as SD
 import math
