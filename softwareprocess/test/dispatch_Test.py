@@ -33,7 +33,7 @@ class DispatchTest(unittest.TestCase):
     # sad path
     def test300_900ShouldReturnErrorIfMandatoryInformationIsMissing(self):
         values = {'op': 'predict'}
-        expectedDictionary = {'error':'mandatory information is missing', 'op': 'predict'}
+        expectedDictionary = {'error':'Mandatory information is missing', 'op': 'predict'}
         self.assertDictEqual(SD.dispatch(values), expectedDictionary)
 
     def test300_910ShouldReturnIfBodyIsNumeric(self):
