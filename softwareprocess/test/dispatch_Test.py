@@ -5,8 +5,8 @@ import math
 
 class DispatchTest(unittest.TestCase):
     def test_1100_002(self):
-        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
-        self.assertDictEqual(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
+        output = SD.dispatch({'op': 'predict', 'body': 'Aldebaran', 'date': '2016-01-17', 'time': '03:15:42'})
+        self.assertDictEqual(output == {'op': 'predict', 'body': 'Aldebaran', 'date': '2016-01-17', 'time': '03:15:42', 'long': '95d41.6', 'lat': '16d32.3'})
 
 """
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
