@@ -9,7 +9,7 @@ class DispatchTest(unittest.TestCase):
 
     def test_400_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
-        self.assertEqual(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
+        self.assertEqual(output, {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
 
 """
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
