@@ -4,6 +4,11 @@ import softwareprocess.dispatch as SD
 import math
 
 class DispatchTest(unittest.TestCase):
+    def test_1100_002(self):
+        output = SD.dispatch({'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'})
+        self.assertDictEqual(output == {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '7d24.3'})
+
+"""
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
         values = {'op': 'predict', 'body': 'Betelgeuse'}
         self.assertEqual(SD.dispatch(values)['lat'], '7d24.3')
@@ -128,9 +133,9 @@ class DispatchTest(unittest.TestCase):
         values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '02:15:02', 'long':'75d53.6'}
         self.assertTrue(SD.dispatch(values).has_key("error"), True)
 
+# my test
 
 
-"""
     def test_100_001(self):
         output = SD.dispatch(42)
         self.assertTrue(output == {'error': 'parameter is not a dictionary'})
