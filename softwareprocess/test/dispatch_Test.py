@@ -15,6 +15,10 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch({'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertEqual(output, {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '8d54.8'})
 
+    def test300_130ShouldPredictTheLocation(self):
+        values = {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
+        self.assertAlmostEqual(SD.dispatch(values)['lat'],"8d54.8")
+
 """
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
         values = {'op': 'predict', 'body': 'Betelgeuse'}
