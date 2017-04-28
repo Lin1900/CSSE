@@ -33,16 +33,39 @@ def Correct(values):
         values['error'] = 'assumedLong is invalid'
         return values
 
+    lat = values['lat']
+    if not isinstance(lat,str):
+       values['error'] = 'input is invalid'
+       return values
+    if 'd' not in lat:
+        values['error'] = 'lat is invalid'
+        return values
+
+    long = values['long']
+    if not isinstance(long,str):
+       values['error'] = 'input is invalid'
+       return values
+    if 'd' not in long:
+        values['error'] = 'long is invalid'
+        return values
+
+    altitude = values['altitude']
+    if not isinstance(altitude,str):
+       values['error'] = 'input is invalid'
+       return values
+    if 'd' not in altitude:
+        values['error'] = 'assumedLong is invalid'
+        return values
+
     newassumedLong = values['assumedLong'].split('d')
     newassumedLat = values['assumedLat'].split('d')
+    newlat = 
+
     assumedLatDe = newassumedLat[0]
     assumedLatMin = newassumedLat[1]
     assumedLongDe = newassumedLong[0]
     assumedLongMin = newassumedLong[1]
 
-    lat = values['lat']
-    long = values['long']
-    altitude = values['altitude']
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
