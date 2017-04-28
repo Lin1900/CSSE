@@ -117,13 +117,13 @@ def minuteToDegree(degrees):
             degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
-    while deg > 360:
-        deg = deg - 360
+    while int(degrees) > 360:
+        deg = int(degrees) - 360
 
     if float(deg_minutes) < 10.0:
-        altitude = str(deg) + 'd0' + deg_minutes
+        altitude = str(int(degrees)) + 'd0' + deg_minutes
     else:
-        altitude = str(deg) + 'd' + deg_minutes
+        altitude = str(int(degrees)) + 'd' + deg_minutes
     return altitude
 
 def minutes_to_arc_minutes(deg):
