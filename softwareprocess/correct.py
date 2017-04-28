@@ -132,7 +132,8 @@ def Correct(values):
 def degreeToMinute(minutes):
     #deg = float(minutes[0:minutes.find('d')])
     #min = float(minutes[minutes.find('d')+1: len(minutes)])
-    deg = minutes.split('d')[0]
+    deg = float(minutes.split('d')[0])
+    min = float(minutes.split('d')[1])
     min = min / 60
     if minutes[0] == '-':
         deg = deg - min
