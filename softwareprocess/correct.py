@@ -101,24 +101,19 @@ def Correct(values):
 
 def degreeToMinute(minutes):
     deg = float(minutes[0:minutes.find('d')])
-    m = float(minutes[minutes.find('d')+1: len(minutes)])
-    m = m / 60
+    min = float(minutes[minutes.find('d')+1: len(minutes)])
+    min = min / 60
     if minutes[0] == '-':
-        deg = deg - m
+        deg = deg - min
     else:
-        deg = deg + m
-
-    # deg = deg + m
-    # if minutes[0] == '-':
-    #     deg = deg * (-1)
+        deg = deg + min
     return deg
 
 def minuteToDegree(degrees):
-    deg = int(degrees)
-    degrees = abs(degrees - deg) * 60
-    deg_string = str(degrees)
-    if not(deg_string[deg_string.find('.')+2: deg_string.find('.')+3] == ''):
-        if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
+    degrees = abs(degrees - int(degrees)) * 60
+    #deg_string = str(degrees)
+    if not(str(degrees)[str(degrees).find('.')+2: str(degrees).find('.')+3] == ''):
+        if (int(str(degrees)[str(degrees).find('.')+2: str(degrees).find('.')+3]) > 4):
             degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
