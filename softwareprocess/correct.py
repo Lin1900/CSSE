@@ -61,14 +61,6 @@ def Correct(values):
     newassumedLat = values['assumedLat'].split('d')
     newlat = lat.split('d')
     newlong = long.split('d')
-    newaltitude = altitude.split('d')
-   # if (newlat[0] >= 90 or newlat[0] <= -90):
-    #    values['error'] = 'lat is invalid'
-    #    return values
-    if (newassumedLat[0] >= 90 or newlat[o] <= -90):
-        values['error'] = 'assumedLat is invalid'
-        return values
-
 
 #    assumedLatDe = newassumedLat[0]
  #   assumedLatMin = newassumedLat[1]
