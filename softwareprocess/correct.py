@@ -65,10 +65,10 @@ def Correct(values):
     if (int(newassumedLat[0]) >= 90 or int(newassumedLat[0]) <= -90):
         values['error'] = 'assumedLat is invalid'
         return values
-    if not isNumber(newassumedLat[0] or newassumedLat[1]):
-            values['error'] = 'assumedLat is invalid'
-            return values
     if (float(newassumedLat[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
+        values['error'] = 'assumedLat is invalid'
+        return values
+    if not isNumber(newassumedLat[0] or newassumedLat[1]):
         values['error'] = 'assumedLat is invalid'
         return values
     if (int(newassumedLong[0]) >= 360 or int(newassumedLong[0]) < 0):
@@ -77,6 +77,9 @@ def Correct(values):
     if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
+    if not isNumber(newassumedLong[0] or newassumedLong[1]):
+            values['error'] = 'assumedLong is invalid'
+            return values
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
