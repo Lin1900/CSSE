@@ -45,6 +45,7 @@ def Correct(values):
     values['correctedAzimuth'] = minuteToDegree(correctedAzimuth)
     return values
 
+"""
 def degreeToMinute(minutes):
     deg = float(minutes[0:minutes.find('d')])
     m = float(minutes[minutes.find('d')+1: len(minutes)])
@@ -114,4 +115,10 @@ def minuteToDegree(degree):
     degree = int(degree) - 360
     degree = str(degree) + 'd' + minute
     return degree
-"""
+
+def minutes_to_arc_minutes(deg):
+    degDegrees = deg[0: deg.find('d')]
+    degMinutes = deg[deg.find('d')+1: len(deg)]
+    degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
+
+    return degArcMinutes
