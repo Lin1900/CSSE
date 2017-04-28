@@ -32,7 +32,7 @@ def Correct(values):
     altitude = values['altitude']
 
 
-    LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
+    LHA = degreeToMinute(lat) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
     correctedAltitude = math.degrees(math.asin(intermediateDistance))   #something wrong
     correctedDistance = degreeToMinute(altitude) - correctedAltitude
