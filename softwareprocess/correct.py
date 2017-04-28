@@ -85,7 +85,7 @@ def Correct(values):
         values['error'] = 'assumedLong is invalid'
         return values
     if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
-        values['error'] = 'assumedLat is invalid'
+        values['error'] = 'assumedLong is invalid'
         return values
     # check lat
     if not isNumber(newlat[0] or newlat[1]):
@@ -104,6 +104,7 @@ def Correct(values):
     if (int(newlong[0]) >= 360 or int(newlong[0]) < 0):
         values['error'] = 'long is invalid'
         return values
+    # check altitude
     if not isNumber(newaltitude[0] or newaltitude[1]):
         values['error'] = 'altitude is invalid'
         return values
