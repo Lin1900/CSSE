@@ -59,12 +59,16 @@ def Correct(values):
 
     newassumedLong = values['assumedLong'].split('d')
     newassumedLat = values['assumedLat'].split('d')
-    newlat = 
+    newlat = lat.split('d')
+    newlong = long.split('d')
+    newaltitude = altitude.split('d')
+    if newlat[0] >= 90 or
 
-    assumedLatDe = newassumedLat[0]
-    assumedLatMin = newassumedLat[1]
-    assumedLongDe = newassumedLong[0]
-    assumedLongMin = newassumedLong[1]
+
+#    assumedLatDe = newassumedLat[0]
+ #   assumedLatMin = newassumedLat[1]
+  #  assumedLongDe = newassumedLong[0]
+   # assumedLongMin = newassumedLong[1]
 
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
