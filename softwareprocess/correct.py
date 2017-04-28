@@ -65,6 +65,9 @@ def Correct(values):
     if (int(newassumedLat[0]) >= 90 or int(newassumedLat[0]) <= -90):
         values['error'] = 'assumedLat is invalid'
         return values
+    if not isNumber(newassumedLat[0] or newassumedLat[1]):
+            values['error'] = 'assumedLat is invalid'
+            return values
     if (float(newassumedLat[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
@@ -74,14 +77,6 @@ def Correct(values):
     if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
-
-
-
-#    assumedLatDe = newassumedLat[0]
- #   assumedLatMin = newassumedLat[1]
-  #  assumedLongDe = newassumedLong[0]
-   # assumedLongMin = newassumedLong[1]
-
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
@@ -135,6 +130,13 @@ def minutes_to_arc_minutes(deg):
     degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
 
     return degArcMinutes
+
+def isNumber(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
 
 
 """
