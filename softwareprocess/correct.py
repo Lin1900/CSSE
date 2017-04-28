@@ -10,6 +10,11 @@ def Correct(values):
         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
         return values
 
+    # typechack
+    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str)):
+       values['error'] = 'input is invalid'
+       return values
+
     #if ('correctedDistance' in values):
     #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
     #     return values
@@ -37,11 +42,6 @@ def Correct(values):
     lat = values['lat']
     long = values['long']
     altitude = values['altitude']
-
-    # typechack
-    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str)):
-       values['error'] = 'input is invalid'
-       return values
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
