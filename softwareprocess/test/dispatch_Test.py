@@ -36,13 +36,17 @@ class DispatchTest(unittest.TestCase):
         output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude': '13d42.3', 'assumedLat': '2ad38.4', 'assumedLong': '74d35.3'})
         self.assertDictEqual(output, {'op':'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude':'13d42.3', 'assumedLat': '2ad38.4', 'assumedLong': '74d35.3', 'error': 'assumedLat is invalid'})
 
-    def test6_200_007_mis(self):
-        output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude': '13d42.3', 'assumedLat': '2ad38.4', 'assumedLong': '74d35.3'})
-        self.assertDictEqual(output, {'op':'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude':'13d42.3', 'assumedLat': '2ad38.4', 'assumedLong': '74d35.3', 'error': 'assumedLat is invalid'})
-
     def test6_200_008_mis(self):
+        output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude': '13d42.3', 'assumedLat': '-53d38.4', 'assumedLong': '74d60'})
+        self.assertDictEqual(output, {'op':'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude':'13d42.3', 'assumedLat': '-53d38.4', 'assumedLong': '74d60', 'error': 'assumedLong is invalid'})
+
+    def test6_200_009_mis(self):
         output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude': '13d42.3', 'assumedLat': '2.38.4', 'assumedLong': '74d35.3'})
         self.assertDictEqual(output, {'op':'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude':'13d42.3', 'assumedLat': '2.38.4', 'assumedLong': '74d35.3', 'error': 'assumedLat is invalid'})
+
+    def test6_200_0010_InputInvalid(self):
+        output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude': '-21d42.3', 'assumedLat': '-53d38.4', 'assumedLong': '74d35.3'})
+        self.assertDictEqual(output, {'op':'correct', 'lat': '16d32.3', 'long': '95d41.6', 'altitude':'-21d42.3', 'assumedLat': '-53d38.4', 'assumedLong': '74d35.3', 'error': 'altitude is invalid'})
 
 
 """
