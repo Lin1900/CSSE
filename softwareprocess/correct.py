@@ -41,6 +41,7 @@ def Correct(values):
     Azimuth1 = math.sin(math.radians(degreeToMinute(lat))) - (math.sin(math.radians(degreeToMinute(assumedLat))) * intermediateDistance)
     Azimuth2 = math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.asin(intermediateDistance))
     correctedAzimuth = math.acos(Azimuth1 / Azimuth2)
+    correctedAzimuth = math.degree(correctedAzimuth)
     values['correctedAzimuth'] = minuteToDegree(correctedAzimuth)
     return values
 
