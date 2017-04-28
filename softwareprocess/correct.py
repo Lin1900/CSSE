@@ -7,8 +7,8 @@ def Correct(values):
         return values
 
     if ('correctedDistance' in values or 'correctedAzimuth' in values):
-            values['error'] = 'corrected distance/azimuth is not allowed as an input'
-            return values
+        values['error'] = 'correctedDistance or correctedAzimuth is invalid'
+        return values
 
     #if ('correctedDistance' in values):
     #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
