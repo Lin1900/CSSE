@@ -84,7 +84,7 @@ def Correct(values):
     if (int(newassumedLong[0]) >= 360 or int(newassumedLong[0]) < 0):
         values['error'] = 'assumedLong is invalid'
         return values
-    if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
+    if (float(newassumedLong[1]) >= 60.0 or float(newassumedLong[1]) < 0.0):
         values['error'] = 'assumedLong is invalid'
         return values
     # check lat
@@ -130,8 +130,9 @@ def Correct(values):
 
 
 def degreeToMinute(minutes):
-    deg = float(minutes[0:minutes.find('d')])
-    min = float(minutes[minutes.find('d')+1: len(minutes)])
+    #deg = float(minutes[0:minutes.find('d')])
+    #min = float(minutes[minutes.find('d')+1: len(minutes)])
+    deg = minutes.split('d')[0]
     min = min / 60
     if minutes[0] == '-':
         deg = deg - min
@@ -170,42 +171,3 @@ def isNumber(s):
         return True
     except ValueError:
         return False
-
-
-"""
-def degreeToMinute(n):
-    degree = n.split('d')
-    deg = degree[0]
-    newDeg = int(deg)
-    minute = float(degree[1])
-    if newDeg != 0:
-        if deg[0] < 0:
-            degree = newDeg - minute / 60
-        else:
-            degree = newDeg + minute / 60
-    else:
-        if deg[0] == '-':
-            degree = - minute / 60
-        else:
-            degree = minute / 60
-    return degree
-
-def minuteToDegree(degree):
-    minute = str("{:.1f}".format((degree - int(degree)) * 60))
-    if '-' in minute:
-        minute = minute.replace('-', '')
-    minute = minute.split('.')
-    min1 = minute[0].zfill(2)
-    min2 = minute[1]
-    minute = min1 + '.' + min2
-    degree = int(degree) - 360
-    degree = str(degree) + 'd' + minute
-    return degree
-
-def minutes_to_arc_minutes(deg):
-    degDegrees = deg[0: deg.find('d')]
-    degMinutes = deg[deg.find('d')+1: len(deg)]
-    degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
-    return degArcMinutes
-
-"""
