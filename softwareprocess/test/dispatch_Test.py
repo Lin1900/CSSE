@@ -6,7 +6,7 @@ class DispatchTest(unittest.TestCase):
 
     def test6_100_001_caculate(self):
         output = SD.dispatch({'op': 'correct', 'lat': '16d32.3', 'long':'95d41.6', 'altitude': '13d42.3', 'assumedLat': '-53d38.4', 'assumedLong': ' 74d35.3'})
-        self.assertDictEqual(output.date, {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth': '164d43.1'})
+        self.assertDictEqual(output.data, {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth': '164d43.1'})
 
 
 """
