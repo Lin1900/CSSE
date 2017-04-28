@@ -10,11 +10,6 @@ def Correct(values):
         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
         return values
 
-    # typechack
-    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str)):
-       values['error'] = 'input is invalid'
-       return values
-
     #if ('correctedDistance' in values):
     #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
     #     return values
@@ -22,18 +17,24 @@ def Correct(values):
     #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
     #     return values
 
-    assumedLat = values['assumedLat']
+    assumedLat = values['assumedLat']    #check type
+    if not isinstance(assumedLat,str):
+       values['error'] = 'input is invalid'
+       return values
     if 'd' not in assumedLat:
         values['error'] = 'assumedLat is invalid'
         return values
-    newassumedLat = values['assumedLat'].split('d')
 
     assumedLong = values['assumedLong']
+    if not isinstance(assumedLong,str):
+       values['error'] = 'input is invalid'
+       return values
     if 'd' not in assumedLong:
         values['error'] = 'assumedLong is invalid'
         return values
-    newassumedLong = values['assumedLong'].split('d')
 
+    newassumedLong = values['assumedLong'].split('d')
+    newassumedLat = values['assumedLat'].split('d')
     assumedLatDe = newassumedLat[0]
     assumedLatMin = newassumedLat[1]
     assumedLongDe = newassumedLong[0]
