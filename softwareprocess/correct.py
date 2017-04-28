@@ -8,7 +8,7 @@ def Correct(values):
     keys = ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong']
     for key in keys:
         if key not in dict.keys(values):
-            values['error'] = 'Mandatory information missing'
+            values['error'] = 'Mandatory information is missing'
             return values
 
     if ('correctedDistance' in values or 'correctedAzimuth' in values):
