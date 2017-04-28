@@ -117,7 +117,7 @@ def minuteToDegree(degrees):
             degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
-    while int(degrees) > 360:
+    while deg > 360:
         deg = int(degrees) - 360
 
     if float(deg_minutes) < 10.0:
