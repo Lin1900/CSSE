@@ -110,21 +110,21 @@ def degreeToMinute(minutes):
     return deg
 
 def minuteToDegree(degrees):
-    #indeg = int(degrees)
-    degrees = abs(degrees - int(degrees)) * 60
+    indeg = int(degrees)
+    degrees = abs(degrees - indeg) * 60
     deg_string = str(degrees)
     if not(deg_string[deg_string.find('.')+2: deg_string.find('.')+3] == ''):
         if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
             degrees = degrees + 0.1
 
     deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
-    while int(degrees) > 360:
-          deg = int(degrees) - 360
+    while indeg > 360:
+          indeg = indeg - 360
 
     if float(deg_minutes) < 10.0:
-        altitude = str(int(degrees)) + 'd0' + deg_minutes
+        altitude = str(indeg) + 'd0' + deg_minutes
     else:
-        altitude = str(int(degrees)) + 'd' + deg_minutes
+        altitude = str(indeg) + 'd' + deg_minutes
     return altitude
 
 def minutes_to_arc_minutes(deg):
