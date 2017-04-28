@@ -4,10 +4,10 @@ import math
 
 class DispatchTest(unittest.TestCase):
 
-    def test6_200_050_InValidValues(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
-        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d43.1'}
-        self.assertDictEqual(SD.dispatch(values),result)
+    def test6_100_001_caculate(self):
+        output = SD.dispatch({'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'})
+        self.assertDictEqua(output, {'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d43.1'})
+        
 
 """
    def test_1100_002(self):
