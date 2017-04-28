@@ -15,6 +15,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test/convertString2DictionaryTest.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/softwareprocess/test1.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/correct.py" afterPath="$PROJECT_DIR$/softwareprocess/correct.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" afterPath="$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py" />
     </list>
     <ignored path="CSSE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +50,8 @@
       <file leaf-file-name="correct.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/correct.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+            <state relative-caret-position="269">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -61,9 +62,11 @@
       <file leaf-file-name="dispatch_Test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -530,12 +533,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 30m 19s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 32m 03s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 33m 51s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -560,6 +557,12 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 45m 13s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 46m 57s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.27 at 22h 47m 19s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="285" y="23" width="959" height="723" extended-state="0" />
@@ -569,7 +572,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25603864" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31428573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31428573" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -845,16 +848,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatch_Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/correct.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        <state relative-caret-position="269">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

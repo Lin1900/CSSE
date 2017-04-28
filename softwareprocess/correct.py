@@ -36,7 +36,7 @@ def Correct(values):
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
     correctedAltitude = math.degrees(math.asin(intermediateDistance))   #something wrong
     correctedDistance = degreeToMinute(altitude) - correctedAltitude
-    values['correctDistance'] = minutes_to_arc_minutes(minuteToDegree(correctedDistance))
+    values['correctDistance'] = str.(minutes_to_arc_minutes(minuteToDegree(correctedDistance)))
 
     Azimuth1 = math.sin(math.radians(degreeToMinute(lat))) - (math.sin(math.radians(degreeToMinute(assumedLat))) * intermediateDistance)
     Azimuth2 = math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.asin(intermediateDistance))
