@@ -39,7 +39,7 @@ def Correct(values):
     altitude = values['altitude']
 
     # typechack
-    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str) or isinstance(lat, str) or isinstance(long, str) or isinstance(altitude, str)):
+    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str)):
        values['error'] = 'input is invalid'
        return values
 
