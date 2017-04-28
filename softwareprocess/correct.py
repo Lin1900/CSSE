@@ -2,7 +2,7 @@ import math
 import re
 
 def Correct(values):
-    if ('lat' not in values and 'long' not in values or 'altitude' not in values or 'assumedLat' not in values or 'assumendLong' not in values):
+    if ('lat' not in values and 'long' not in values and 'altitude' not in values and 'assumedLat' not in values and 'assumendLong' not in values):
         values['error'] = 'Mandatory information is missing'
         return values
 
