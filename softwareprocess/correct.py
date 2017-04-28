@@ -2,9 +2,14 @@ import math
 import re
 
 def Correct(values):
-    if not ('lat' in values or 'long' in values or 'altitude' in values or 'assumedLat' in values or 'assumendLong' in values):
-        values['error'] = 'Mandatory information is missing'
-        return values
+   # if not ('lat' in values or 'long' in values or 'altitude' in values or 'assumedLat' in values or 'assumendLong' in values):
+    #    values['error'] = 'Mandatory information is missing'
+     #   return values
+    keys = ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong']
+   for key in keys:
+        if key not in dict.keys(values):
+            values['error'] = 'Mandatory information missing'
+            return values
 
     if ('correctedDistance' in values or 'correctedAzimuth' in values):
         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
@@ -61,25 +66,24 @@ def Correct(values):
     newassumedLat = values['assumedLat'].split('d')
     newlat = lat.split('d')
     newlong = long.split('d')
-
+    if not isNumber(newassumedLat[0] or newassumedLat[1]):
+        values['error'] = 'assumedLat is invalid'
+        return values
     if (int(newassumedLat[0]) >= 90 or int(newassumedLat[0]) <= -90):
         values['error'] = 'assumedLat is invalid'
         return values
     if (float(newassumedLat[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
-    if not isNumber(newassumedLat[0] or newassumedLat[1]):
-        values['error'] = 'assumedLat is invalid'
-        return values
+    if not isNumber(newassumedLong[0] or newassumedLong[1]):
+            values['error'] = 'assumedLong is invalid'
+            return values
     if (int(newassumedLong[0]) >= 360 or int(newassumedLong[0]) < 0):
         values['error'] = 'assumedLong is invalid'
         return values
     if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
-    if not isNumber(newassumedLong[0] or newassumedLong[1]):
-            values['error'] = 'assumedLong is invalid'
-            return values
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
