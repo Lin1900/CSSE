@@ -6,7 +6,7 @@ def Correct(values):
         values['error'] = 'Mandatory information is missing'
         return values
 
-    if ('correctedDistance' in values or 'correctedAzimuth' in values):
+    if ('correctedDistance' in values and 'correctedAzimuth' in values):
          values['error'] = 'correctedDistance or correctedAzimuth is invalid'
          return values
 
