@@ -6,12 +6,16 @@ def Correct(values):
         values['error'] = 'Mandatory information is missing'
         return values
 
-    if ('correctedDistance' in values):
-         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
-         return values
-    if ('correctedAzimuth' in values):
-         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
-         return values
+    if ('correctedDistance' in values or 'correctedAzimuth' in values):
+            values['error'] = 'corrected distance/azimuth is not allowed as an input'
+            return values
+
+    #if ('correctedDistance' in values):
+    #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
+    #     return values
+    #if ('correctedAzimuth' in values):
+    #     values['error'] = 'correctedDistance or correctedAzimuth is invalid'
+    #     return values
 
     assumedLat = values['assumedLat']
     if 'd' not in assumedLat:
