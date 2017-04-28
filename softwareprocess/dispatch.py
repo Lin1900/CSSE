@@ -7,6 +7,7 @@ import math
 import re
 import adjust as adjust
 import newpredict as predict
+import correct as correct
 
 def dispatch(values=None):
 
@@ -28,7 +29,8 @@ def dispatch(values=None):
         return predict.Predict(values)    #This calculation is stubbed out
         #return values
     elif(values['op'] == 'correct'):
-        return values    #This calculation is stubbed out
+        return correct.Correct(values)
+       # return values    #This calculation is stubbed out
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:

@@ -3,7 +3,14 @@ import softwareprocess.dispatch as SD
 import math
 
 class DispatchTest(unittest.TestCase):
-    def test_1100_002(self):
+
+    def test6_200_050_InValidValues(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'-3950', 'correctedAzimuth':'164d43.1'}
+        self.assertDictEqual(SD.dispatch(values),result)
+
+"""
+   def test_1100_002(self):
         output = SD.dispatch({'op': 'predict', 'body': 'Aldebaran', 'date': '2016-01-17', 'time': '03:15:42'})
         self.assertEqual(output, {'op': 'predict', 'body': 'Aldebaran', 'date': '2016-01-17', 'time': '03:15:42', 'long': '95d41.6', 'lat': '16d32.3'})
 
@@ -15,14 +22,13 @@ class DispatchTest(unittest.TestCase):
   #      output = SD.dispatch({'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'})
   #      self.assertEqual(output, {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42', 'long': '75d53.6', 'lat': '8d54.8'})
 
-"""
     def test300_140ShouldPredictTheLocation(self):
         values = {'op': 'predict', 'body': 'Altair', 'date': '2016-01-17', 'time': '03:15:42'}
         data = SD.dispatch(values).get('long').split('d')
         result = int(data[0]) + float(data[1]) / 60
         self.assertAlmostEqual(result, 227.023333333, delta=2.023333333)
 
-
+#
 
     def test300_100ShouldReturnTheCorrectStarLatitudeValue(self):
         values = {'op': 'predict', 'body': 'Betelgeuse'}
