@@ -36,15 +36,55 @@ def Correct(values):
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
     correctedAltitude = math.degrees(math.asin(intermediateDistance))   #something wrong
     correctedDistance = degreeToMinute(altitude) - correctedAltitude
-    values['correctDistance'] = minuteToDegree(correctedDistance)
+    values['correctDistance'] = minutes_to_arc_minutes(minuteToDegree(correctedDistance))
 
     Azimuth1 = math.sin(math.radians(degreeToMinute(lat))) - (math.sin(math.radians(degreeToMinute(assumedLat))) * intermediateDistance)
     Azimuth2 = math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.asin(intermediateDistance))
     correctedAzimuth = math.acos(Azimuth1 / Azimuth2)
     values['correctedAzimuth'] = minuteToDegree(correctedAzimuth)
+    return values
+
+def degreeToMinute(minutes):
+    deg = float(minutes[0:minutes.find('d')])
+    m = float(minutes[minutes.find('d')+1: len(minutes)])
+    m = m / 60
+    if minutes[0] == '-':
+        deg = deg - m
+    else:
+        deg = deg + m
+
+    # deg = deg + m
+    # if minutes[0] == '-':
+    #     deg = deg * (-1)
+    return deg
+
+def minuteToDegree(degrees):
+    deg = int(degrees)
+    degrees = abs(degrees - deg) * 60
+    deg_string = str(degrees)
+    if not(deg_string[deg_string.find('.')+2: deg_string.find('.')+3] == ''):
+        if (int(deg_string[deg_string.find('.')+2: deg_string.find('.')+3]) > 4):
+            degrees = degrees + 0.1
+
+    deg_minutes = str(degrees)[0:str(degrees).find('.')+2]
+    while deg > 360:
+        deg = deg - 360
+
+    if float(deg_minutes) < 10.0:
+        altitude = str(deg) + 'd0' + deg_minutes
+    else:
+        altitude = str(deg) + 'd' + deg_minutes
+    return altitude
+
+def minutes_to_arc_minutes(deg):
+    degDegrees = deg[0: deg.find('d')]
+    degMinutes = deg[deg.find('d')+1: len(deg)]
+    degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
+
+    return degArcMinutes
 
 
-
+"""
 def degreeToMinute(n):
     degree = n.split('d')
     deg = degree[0]
@@ -73,4 +113,4 @@ def minuteToDegree(degree):
     degree = int(degree) - 360
     degree = str(degree) + 'd' + minute
     return degree
-
+"""
