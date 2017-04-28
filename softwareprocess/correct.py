@@ -1,5 +1,5 @@
 import math
-
+import re
 
 def Correct(values):
    # if ('lat' not in values or 'long' not in values or 'altitude' not in values or 'assumedLat' not in values or 'assumendLong' not in values):
@@ -120,5 +120,4 @@ def minutes_to_arc_minutes(deg):
     degDegrees = deg[0: deg.find('d')]
     degMinutes = deg[deg.find('d')+1: len(deg)]
     degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
-
     return degArcMinutes
