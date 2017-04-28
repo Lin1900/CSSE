@@ -10,7 +10,7 @@ def Correct(values):
          values['error'] = 'correctedDistance or correctedAzimuth is invalid'
          return values
     if ('correctedAzimuth' in values):
-         values['error'] = 'correctedAzimuth or correctedAzimuth is invalid'
+         values['error'] = 'correctedDistance or correctedAzimuth is invalid'
          return values
 
     assumedLat = values['assumedLat']
