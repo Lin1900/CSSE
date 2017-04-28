@@ -66,6 +66,8 @@ def Correct(values):
     newassumedLat = values['assumedLat'].split('d')
     newlat = lat.split('d')
     newlong = long.split('d')
+    newaltitude = altitude.split('d')
+    # check assumedLat
     if not isNumber(newassumedLat[0] or newassumedLat[1]):
         values['error'] = 'assumedLat is invalid'
         return values
@@ -75,6 +77,7 @@ def Correct(values):
     if (float(newassumedLat[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
+    # check assumedLong
     if not isNumber(newassumedLong[0] or newassumedLong[1]):
             values['error'] = 'assumedLong is invalid'
             return values
@@ -84,12 +87,38 @@ def Correct(values):
     if (float(newassumedLong[1]) >= 60.0 or float(newassumedLat[1]) < 0.0):
         values['error'] = 'assumedLat is invalid'
         return values
+    # check lat
+    if not isNumber(newlat[0] or newlat[1]):
+        values['error'] = 'lat is invalid'
+        return values
+    if (int(newlat[0]) >= 90 or int(newlat[0]) <= -90):
+        values['error'] = 'lat is invalid'
+        return values
+    if (float(newlat[1]) >= 60.0 or float(newlat[1]) < 0.0):
+        values['error'] = 'lat is invalid'
+        return values
+    # check long
+    if not isNumber(newlong[0] or newlong[1]):
+        values['error'] = 'long is invalid'
+        return values
+    if (int(newlong[0]) >= 360 or int(newlong[0]) < 0):
+        values['error'] = 'long is invalid'
+        return values
+    if not isNumber(newaltitude[0] or newaltitude[1]):
+        values['error'] = 'altitude is invalid'
+        return values
+    if (int(newaltitude[0]) >= 90 or int(newaltitude[0]) <= 0):
+        values['error'] = 'altitude is invalid'
+        return values
+    if (float(newaltitude[1]) >= 60.0 or float(newaltitude[1]) < 0.0):
+        values['error'] = 'altitude is invalid'
+        return values
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
     correctedAltitude = math.degrees(math.asin(intermediateDistance))   #something wrong
     correctedDistance = degreeToMinute(altitude) - correctedAltitude
-    values['correctedDistance'] = str(minutes_to_arc_minutes(minuteToDegree(correctedDistance)))
+    values['correctedDistance'] = str(minutestoArcminutes(minuteToDegree(correctedDistance)))
 
     Azimuth1 = math.sin(math.radians(degreeToMinute(lat))) - (math.sin(math.radians(degreeToMinute(assumedLat))) * intermediateDistance)
     Azimuth2 = math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.asin(intermediateDistance))
@@ -127,7 +156,7 @@ def minuteToDegree(degrees):
         altitude = str(indeg) + 'd' + deg_minutes
     return altitude
 
-def minutes_to_arc_minutes(deg):
+def minutestoArcminutes(deg):
     degDegrees = deg[0: deg.find('d')]
     degMinutes = deg[deg.find('d')+1: len(deg)]
     degArcMinutes = int(degDegrees) * 60 + int(float(degMinutes))
