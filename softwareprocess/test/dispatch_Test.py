@@ -10,7 +10,7 @@ class DispatchTest(unittest.TestCase):
 
     def test6_100_001_caculate(self):
         output = SD.dispatch({'op': 'correct', 'long':'95d41.6', 'altitude': '13d42.3', 'assumedLat': '-53d38.4', 'assumedLong': ' 74d35.3'})
-        self.assertDictEqual(output, {'op':'correct', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'error': 'Mandatory information is missing'})
+        self.assertDictEqual(output, {'op':'correct', 'long':'95d41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'})
 
 
 """
