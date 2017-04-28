@@ -20,7 +20,7 @@ def Correct(values):
     if 'd' not in assumedLong:
         values['error'] = 'assumedLong is invalid'
         return values
-    newassumedLong = assumedLong = values['assumedLong'].split('d')
+    newassumedLong = values['assumedLong'].split('d')
 
     assumedLatDe = newassumedLat[0]
     assumedLatMin = newassumedLat[1]
@@ -32,7 +32,7 @@ def Correct(values):
     altitude = values['altitude']
 
 
-    LHA = degreeToMinute(lat) + degreeToMinute(assumedLong)
+    LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
     correctedAltitude = math.degrees(math.asin(intermediateDistance))   #something wrong
     correctedDistance = degreeToMinute(altitude) - correctedAltitude
