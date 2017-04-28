@@ -37,9 +37,9 @@ def Correct(values):
     if not isinstance(lat,str):
        values['error'] = 'input is invalid'
        return values
-    if 'd' not in lat:
-        values['error'] = 'lat is invalid'
-        return values
+    #if 'd' not in lat:
+    #    values['error'] = 'lat is invalid'
+    #    return values
 
     long = values['long']
     if not isinstance(long,str):
