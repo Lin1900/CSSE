@@ -6,7 +6,7 @@ def Correct(values):
     #    values['error'] = 'Mandatory information is missing'
      #   return values
     keys = ['lat', 'long', 'altitude', 'assumedLat', 'assumedLong']
-   for key in keys:
+    for key in keys:
         if key not in dict.keys(values):
             values['error'] = 'Mandatory information missing'
             return values
