@@ -38,6 +38,10 @@ def Correct(values):
     long = values['long']
     altitude = values['altitude']
 
+    # typechack
+    if not (isinstance(assumedLat,str) or isinstance(assumedLong, str) or isinstance(lat, str) or isinstance(long, str) or isinstance(altitude, str)):
+       values['error'] = 'input is invalid'
+       return values
 
     LHA = degreeToMinute(long) + degreeToMinute(assumedLong)
     intermediateDistance = (math.sin(math.radians(degreeToMinute(lat))) * math.sin(math.radians(degreeToMinute(assumedLat)))) + (math.cos(math.radians(degreeToMinute(lat))) * math.cos(math.radians(degreeToMinute(assumedLat))) * math.cos(math.radians(LHA)))
@@ -92,12 +96,6 @@ def minutes_to_arc_minutes(deg):
 
     return degArcMinutes
 
-def isstring(s):
-    isString = isinstance(s,basestring)
-    isinstance(s,str)
-
-def typecheck(s):
-    if 
 
 """
 def degreeToMinute(n):
