@@ -2,9 +2,9 @@ import math
 import re
 
 def Correct(values):
-   # if ('lat' not in values or 'long' not in values or 'altitude' not in values or 'assumedLat' not in values or 'assumendLong' not in values):
-    #    values['error'] = 'Mandatory information is missing'
-     #   return values
+    if ('lat' not in values or 'long' not in values or 'altitude' not in values or 'assumedLat' not in values or 'assumendLong' not in values):
+        values['error'] = 'Mandatory information is missing'
+        return values
 
     if ('correctedDistance' in values or 'correctedAzimuth' in values):
          values['error'] = 'correctedDistance or correctedAzimuth is invalid'
